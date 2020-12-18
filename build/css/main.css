@@ -1,0 +1,10 @@
+.button{cursor:pointer;font-weight:bold;font-size:0.75rem;text-transform:uppercase;color:#fff;text-align:center;border-radius:6rem;text-decoration:none;display:block;width:6.9rem;padding:1.05rem 1.1875rem;margin:20px 10px}.button--not-border-purple{color:#bc9cff;background:#fff}.button--not-border-purple:hover,.button--not-border-purple:active{opacity:0.5}.button--not-border-grey{color:rgba(31,32,65,0.5);font-size:12px;font-weight:bold;background:#fff}.button--not-border-grey:hover,.button--not-border-grey:active{opacity:0.5}.button--border{color:#bc9cff;padding:0.85rem 0.8rem;background-color:#fff;border:0.125rem solid;border-color:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%)}.button--border:hover,.button--border:active{opacity:0.5}.button--border-hover{color:#bc9cff;padding:0.85rem 0.8rem;background-color:#fff;border:0.125rem solid;border-color:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);opacity:0.5}.button--fill{background:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%)}.button--fill:hover,.button--fill:active{opacity:0.5}.button--fill-hover{background:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);opacity:0.5}.button--long{position:relative;width:22rem;letter-spacing:0.016rem;text-align:center;background:linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%)}.button--long:hover,.button--long:active{opacity:0.5}.button--long::after{content:'';position:absolute;top:0;right:0;display:block;width:2.75rem;height:2.75rem;background:url(assets/images/arrow_forward.svg) no-repeat center}
+
+.range-dates{display:flex;justify-content:space-between}.range-dates__input{width:150px}
+
+
+
+@font-face{font-family:"montserrat";src:url(assets/fonts/montserrat-regular.woff) format("woff"),url(assets/fonts/montserrat-regular.ttf) format("truetype"),url(assets/fonts/montserrat-regular.svg) format("svg");font-weight:normal;font-style:normal}@font-face{font-family:"montserrat";src:url(assets/fonts/montserrat-bold.woff) format("woff"),url(assets/fonts/montserrat-bold.ttf) format("truetype"),url(assets/fonts/montserrat-bold.svg) format("svg");font-weight:bold;font-style:normal}
+
+*{font-family:"montserrat", "arial", sans-serif}
+

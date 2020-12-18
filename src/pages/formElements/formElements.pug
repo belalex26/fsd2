@@ -2,10 +2,23 @@ head
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
   link(href='assets/fonts/montserrat-regular.woff' as='font')
-  title ColorsType FSD2
+  link(rel='stylesheet', href='css/main.css')
+  title Form Elements FSD2
 
-  include ../../blocks/range-slider/range-slider.pug
+  include ../../blocks/button/button.pug
 
-body.body
-  h1 формы  
-  +slider
+  body.body
+    main.main
+      .container
+        .main__button
+            +button('fill', 'click me', '#')
+            +button('fill-hover', 'click me', '#')
+        
+            +button('border', 'click me', '#')
+            +button('border-hover', 'click me', '#')
+
+            
+            +button('long', 'перейти к оплате', '#')
+           
+            +button('not-border-purple', 'click me', '#')
+            +button('not-border-grey', 'click me', '#')

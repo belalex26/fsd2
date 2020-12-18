@@ -1,0 +1,10 @@
+include ../calendar/calendar
+include ../dropdown-field/dropdown-field
+
+mixin range-dates({ inLabel, outLabel })
+  .range-dates
+    +calendar()
+    .range-dates__input
+      +dropdown-field({ title: inLabel, placeholder: "ДД.ММ.ГГГГ" })
+    .range-dates__input
+      +dropdown-field({ title: outLabel, placeholder: "ДД.ММ.ГГГГ" })
