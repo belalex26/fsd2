@@ -1,0 +1,24 @@
+@import '../../scss/colors.scss';
+
+.bullet-list__item {
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75;
+    list-style: none;
+}
+
+.bullet-list__text {
+    position: relative;
+    width: 80%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $dark-shade-25;
+    }
+}

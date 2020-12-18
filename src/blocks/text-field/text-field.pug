@@ -1,3 +1,5 @@
-mixin text-field(type, placeholder)
+mixin text-field(style, type, placeholder)
     label.text-field
-        input.text-field__input(type=type, placeholder=placeholder)
+        input(class=`text-field__input text-field__input--${style}` type=type, placeholder=placeholder)
+
+        

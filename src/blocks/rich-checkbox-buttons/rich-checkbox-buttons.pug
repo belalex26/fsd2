@@ -1,0 +1,8 @@
+mixin rich-checkbox(options)
+    ul.rich-checkbox__list
+        each item in options
+            li.rich-checkbox__item
+                label.rich-checkbox__label
+                    input.rich-checkbox__input(type="checkbox" name=`${item.name}` checked=item.checked)
+                    span.rich-checkbox__title=item.header
+                        p.rich-checkbox__content=item.content

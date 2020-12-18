@@ -7,21 +7,40 @@ head
 
   include ../../blocks/text-field/text-field.pug
   include ../../blocks/button/button.pug
+  include ../../blocks/bullet-list/bullet-list.pug
+  include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
 
   body.body
     main.main
       .container
         .main__text-field
-          +text-field('text', 'имя')
+          +text-field('', 'text', 'имя')
+          +text-field('subscripton', 'email', 'email')
         .main__button
-            +button('fill', 'click me', '#')
-            +button('fill-hover', 'click me', '#')
+          +button('fill', 'click me', '#')
+          +button('fill-hover', 'click me', '#')
         
-            +button('border', 'click me', '#')
-            +button('border-hover', 'click me', '#')
+          +button('border', 'click me', '#')
+          +button('border-hover', 'click me', '#')
 
-            
-            +button('long', 'перейти к оплате', '#')
+          +button('long', 'перейти к оплате', '#')
            
-            +button('not-border-purple', 'click me', '#')
-            +button('not-border-grey', 'click me', '#')
+          +button('not-border-purple', 'click me', '#')
+          +button('not-border-grey', 'click me', '#')
+
+        .main__bullet-list
+          +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+
+        .rich-checkbox
+          +rich-checkbox([
+                {
+                    name: 'opt',
+                    header: 'Широкий коридор', 
+                    content: 'Ширина коридоров в номере не менее 91 см.'
+                },
+                {
+                    name: 'opt',
+                    header: 'Помощник для инвалидов' , 
+                    content: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                },
+            ])

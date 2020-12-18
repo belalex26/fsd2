@@ -57,6 +57,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/fonts',
+            useRelativePaths: true
           },
         },
       },
@@ -70,6 +71,7 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/images',
+            useRelativePaths: true
           },
         },
       },
