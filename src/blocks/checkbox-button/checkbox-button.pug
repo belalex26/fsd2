@@ -1,0 +1,7 @@
+mixin checkbox-button (option)
+	ul.checkbox__list
+		each item in option
+			li.checkbox__item
+				label.checkbox__label
+					input.checkbox__name(type="checkbox" name=`${item.name}` value=`${item.value}` checked=item.checked)
+					span.checkbox__text=item.content

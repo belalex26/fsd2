@@ -47,7 +47,40 @@ module.exports = {
           },
         },
       },
+
       {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        exclude: /img/,
+        include: /fonts/,
+        use: [
+          {
+            loader: 'file-loader',
+                options: {
+                    name: './fonts/[name].[ext]',
+                    context: path.resolve(__dirname, "src/"),
+                    publicPath: '../',
+                    useRelativePaths: true
+                }
+          }
+        ]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        exclude: /fonts/,
+        use: [
+          {
+            loader: 'file-loader',
+                options: {
+                    name: './img/[name].[ext]',
+                    context: path.resolve(__dirname, "src/"),
+                    publicPath: '../',
+                    useRelativePaths: true
+                }
+          }]
+        },
+
+
+      /*{
         test: /\.(woff(2)?|ttf|eot|svg)$/,
         include: [
           path.resolve(__dirname, 'src/fonts'),
@@ -62,7 +95,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         exclude: [
           path.resolve(__dirname, 'src/fonts'),
         ],
@@ -74,7 +107,7 @@ module.exports = {
             useRelativePaths: true
           },
         },
-      },
+      },*/
     ],
   },
 

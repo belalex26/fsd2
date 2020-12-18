@@ -1,0 +1,70 @@
+@import '../../scss/colors.scss';
+
+.radio {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  
+  .radio__name {
+        position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin: 16px 0 0 16px;
+  }
+  
+  .radio__text {
+    display: block;
+    position: relative;
+    padding: 16px 0 0 16px;
+    cursor: pointer;
+    margin-left: 48px;
+    color: $dark-shade-75;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $purple;
+      border-radius: 50%;
+      left: -16px;
+      top: 14px;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $purple;
+      top: 18px;
+      left: -12px;
+      opacity: 0;
+    }
+  }
+  
+  .radio__name:checked + .radio__text::after {
+    opacity: 1;
+  }
+  
+  .radio__name:checked:active + .radio__text::after {
+    opacity: 0.3;
+  }
+  
+  .radio__name:checked:disabled + .radio__text::after,
+  .radio__name:disabled + .radio__text::before {
+    opacity: 0.1;
+  }
+  
+  .radio__name:checked + .radio__text::before,
+  .radio__name:hover + .radio__text::before,
+  .radio__name:focus + .radio__text::before {
+    border: 1px solid $purple;
+  }
+  
+  .radio__name:active + .radio__text::before {
+    opacity: 0.3;
+  }
+  

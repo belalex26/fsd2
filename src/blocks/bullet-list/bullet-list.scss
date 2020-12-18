@@ -10,12 +10,13 @@
 .bullet-list__text {
     position: relative;
     width: 80%;
+    padding-left: 30px;
 
     &:before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 0;
+        left: 6px;
+        top: 8px;
         width: 10px;
         height: 10px;
         border-radius: 50%;
