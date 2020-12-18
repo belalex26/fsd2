@@ -5,11 +5,14 @@ head
   link(rel='stylesheet', href='css/main.css')
   title Form Elements FSD2
 
+  include ../../blocks/text-field/text-field.pug
   include ../../blocks/button/button.pug
 
   body.body
     main.main
       .container
+        .main__text-field
+          +text-field('text', 'имя')
         .main__button
             +button('fill', 'click me', '#')
             +button('fill-hover', 'click me', '#')
