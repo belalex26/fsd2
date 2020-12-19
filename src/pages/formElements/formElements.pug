@@ -12,6 +12,7 @@ head
   include ../../blocks/expandable-checkbox/expandable-checkbox.pug
   include ../../blocks/checkbox-button/checkbox-button.pug
   include ../../blocks/radio-button/radio-button.pug
+  include ../../blocks/toggle-button/toggle-button.pug
 
   body.body
     main.main
@@ -75,6 +76,9 @@ head
         .radio-button
           +radio-button('gender', 'man', 'Мужчина')
           +radio-button('gender', 'woman', 'Женщина')
+
+        .toggle
+          +toggle-button('Получать спецпредложения')
 
 
 
