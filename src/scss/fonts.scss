@@ -14,3 +14,12 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: "material-icons";
+    src: url(./../fonts/material-icons-regular.woff) format("woff"),
+       url(./../fonts/material-icons-regular.ttf) format("truetype"),
+       url(./../fonts/material-icons-regular.svg) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}

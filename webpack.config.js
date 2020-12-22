@@ -78,36 +78,6 @@ module.exports = {
                 }
           }]
         },
-
-
-      /*{
-        test: /\.(woff(2)?|ttf|eot|svg)$/,
-        include: [
-          path.resolve(__dirname, 'src/fonts'),
-        ],
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/fonts',
-            useRelativePaths: true
-          },
-        },
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        exclude: [
-          path.resolve(__dirname, 'src/fonts'),
-        ],
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'assets/images',
-            useRelativePaths: true
-          },
-        },
-      },*/
     ],
   },
 

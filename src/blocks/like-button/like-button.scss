@@ -1,0 +1,52 @@
+@import "../../scss/colors.scss";
+
+.like {
+  display: inline-block;
+  position: relative;
+  background-color: $white;
+  color: $dark-shade-25;
+  cursor: pointer;
+  padding: 3px 10px 3px 20px;
+  border-radius: 10px;
+  font-size: .625rem;
+  line-height: .75rem;
+  user-select: none;
+
+  &__icon {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    font-family: 'material-icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: .625rem;
+    display: inline-block;
+    line-height: .7rem;
+    text-transform: none;
+
+    &_liked {
+      color: $purple;
+    }
+  }
+
+  &_liked {
+    color: $purple;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    background-color: $dark-shade-25;
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+  &_liked::after {
+    background-image: $gradient-25;
+  }
+}

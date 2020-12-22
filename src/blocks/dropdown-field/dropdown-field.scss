@@ -1,0 +1,74 @@
+@import "../../scss/colors.scss";
+
+.dropdown-field {
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: $dark-shade-100;
+  }
+
+  &__icon-wrapper {
+    position: relative;
+/*
+    &:after {
+      position: absolute;
+      font-family: "Material Icons";
+      font-size: 1.5rem;
+      content: "\e313";
+      text-align: center;
+      line-height: 3.625rem;
+      color: $dark-shade-50;
+      top: -18px;
+      right: 10px;
+    }*/
+  }
+
+  &__input {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 12px 40px 14px 14px;
+    width: 100%;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    color: $dark-shade-75;
+  }
+}@import "../../scss/colors.scss";
+
+.dropdown-field {
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: $dark-shade-100;
+  }
+
+  &__icon-wrapper {
+    position: relative;
+
+    /*&:after {
+      position: absolute;
+      font-family: "Material Icons";
+      font-size: 1.5rem;
+      content: "\e313";
+      text-align: center;
+      line-height: 3.625rem;
+      color: $dark-shade-50;
+      top: -18px;
+      right: 10px;
+    }*/
+  }
+
+  &__input {
+    font-family: Montserrat, OpenSans, sans-serif;
+    font-size: 0.875rem;
+    line-height: 16px;
+    padding: 12px 40px 14px 14px;
+    width: 100%;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+    color: $dark-shade-75;
+  }
+}

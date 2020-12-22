@@ -1,0 +1,38 @@
+@import '../../scss/colors.scss';
+@import './datepicker.scss';
+
+
+.calendar {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+
+  &__footer {
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__clear-button {
+    cursor: pointer;
+    color: $dark-shade-50;
+  }
+
+  &__apply-button {
+    cursor: pointer;
+    color: $purple;
+  }
+}
+
+.datepicker--cell.-current- {
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  color: $white;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.datepicker--cell.-in-range- {
+  color: $dark-shade-50;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  opacity: 0.25;
+}

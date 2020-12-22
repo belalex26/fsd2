@@ -5,6 +5,10 @@ head
   link(rel='stylesheet', href='css/main.css')
   title Form Elements FSD2
 
+  
+  include ../../blocks/calendar/calendar.pug
+  include ../../blocks/range-slider/range-slider.pug
+  include ../../blocks/range-dates/range-dates.pug
   include ../../blocks/text-field/text-field.pug
   include ../../blocks/button/button.pug
   include ../../blocks/bullet-list/bullet-list.pug
@@ -13,10 +17,29 @@ head
   include ../../blocks/checkbox-button/checkbox-button.pug
   include ../../blocks/radio-button/radio-button.pug
   include ../../blocks/toggle-button/toggle-button.pug
+  include ../../blocks/like-button/like-button.pug
+  include ../../blocks/rating/rating.pug
 
   body.body
     main.main
       .container
+        .p
+          +calendar
+        .range-slider
+          +slider({
+              title: "Range slider",
+              type: "double",
+              min: "500",
+              max: "15000",
+              from: "5000",
+              to: "10000"
+              })
+
+        .main__range-dates
+          +range-dates({
+            inLabel: "Date dropdown",
+            outLabel: "Date dropdown"
+          })
         .main__text-field
           +text-field('', 'text', 'имя')
           +text-field('subscripton', 'email', 'email')
@@ -79,6 +102,19 @@ head
 
         .toggle
           +toggle-button('Получать спецпредложения')
+        .like
+          +like({
+            likes: 2,
+            liked: false
+          })
+        .like  
+          +like({
+            likes: 12,
+            liked: true
+          })
+        .main__rating
+          +rating(4)
+          +rating(5)
 
 
 

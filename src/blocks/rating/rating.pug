@@ -1,0 +1,10 @@
+mixin rating(rate)
+    .rating-button
+        - var count = 0;
+        .rating
+            while count < 5
+            if count < rate
+                i.rating__icon star
+            else
+                i.rating__icon star_border
+            -count++

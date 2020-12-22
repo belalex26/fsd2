@@ -1,0 +1,20 @@
+
+@import "../../scss/colors.scss";
+
+.rating {
+  display: flex;
+  user-select: none;
+
+  &__icon {
+    font-family: 'material-icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    display: inline-block;
+    line-height: 16px;
+    text-transform: none;
+    background: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  }
+}
