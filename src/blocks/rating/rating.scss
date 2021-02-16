@@ -2,19 +2,61 @@
 @import "../../scss/colors.scss";
 
 .rating {
-  display: flex;
-  user-select: none;
+  overflow: hidden;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 7.5rem;
+  height: 1.5rem;
 
-  &__icon {
+  &__input {
+    opacity: 0;
+    margin-right: -100%;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    float: right;
+    opacity: 1;
+
+    &:before {
+      font-family: 'material-icons';
+      font-size: 1.5rem;
+      display: block;
+      opacity: 1;
+      content: '\e83a';
+      transition: opacity 0.2s linear;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    &:hover:before,
+    &:hover~&:before {
+      opacity: 1;
+      font-family: 'material-icons';
+      font-size: 1.5rem;
+      display: block;
+      content: '\e838';
+      transition: opacity 0.2s linear;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &:not(:hover)> :checked~&__label:before {
+    opacity: 1;
     font-family: 'material-icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;
-    display: inline-block;
-    line-height: 16px;
-    text-transform: none;
-    background: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    display: block;
+    content: '\e838';
+    transition: opacity 0.2s linear;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

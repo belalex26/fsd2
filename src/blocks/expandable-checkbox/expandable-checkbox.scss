@@ -1,1 +1,9 @@
 @import '../../scss/colors.scss';
+
+.expandable-checkbox__content {
+    display: none;
+}
+
+.expandable-checkbox--active .expandable-checkbox__content {
+    display: block;
+}

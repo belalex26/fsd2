@@ -1,10 +1,9 @@
-mixin rating(rate)
-    .rating-button
-        - var count = 0;
-        .rating
-            while count < 5
-            if count < rate
-                i.rating__icon star
+mixin rating(number, checked)
+    span.rating
+        - for (var i=5; i>=1; i--)
+            if i==checked
+                input.rating__input(id="rating"+number+i type="radio" name="rating"+number value=`${i}` checked)
+                label.rating__label(for="rating"+number+i)=i
             else
-                i.rating__icon star_border
-            -count++
+                input.rating__input(id="rating"+number+i type="radio" name="rating"+number value=`${i}`)
+                label.rating__label(for="rating"+number+i)=i

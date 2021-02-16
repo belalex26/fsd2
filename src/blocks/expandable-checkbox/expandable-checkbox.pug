@@ -1,10 +1,11 @@
-
 mixin expandable-checkbox(text)
     .expandable-checkbox
-        p.expandable-checkbox__text=text
-        ul.expandable-checkbox__list
-        each item in options
-            li.expandable-checkbox__item
-                label.expandable-checkbox__label
-                    input.expandable-checkbox__input(type="checkbox" name=`${item.name}` checked=item.checked)
-                    span.expandable-checkbox__title=item.content
+        .expandable-checkbox__triger
+            p.expandable-checkbox__text=text
+        .expandable-checkbox__content
+            ul.expandable-checkbox__list
+            each item in options
+                li.expandable-checkbox__item
+                    label.expandable-checkbox__label
+                        input.expandable-checkbox__input(type="checkbox" name=`${item.name}` checked=item.checked)
+                        span.expandable-checkbox__title=item.content

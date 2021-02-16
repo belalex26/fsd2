@@ -1,0 +1,46 @@
+@import "../../scss/colors.scss";
+
+.pagination {
+    font-size: 16px;
+  
+    &__item {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: bottom;
+      text-decoration: none;
+      color: $dark-shade-50;
+  
+      &_active {
+        border-radius: 50%;
+        background-image: $gradient;
+        color: $white;
+      }
+    }
+  
+    &__info {
+      font-size: 14px;
+      padding: 8px 0 0 6px;
+    }
+  
+    &__next {
+      width: 40px;
+      height: 40px;
+      line-height: 20px;
+      text-align: center;
+      vertical-align: bottom;
+      border-radius: 50%;
+      background-image: $light-gradient;
+      border: none;
+      cursor: pointer;
+  
+      &::after {
+        content: '\e5c8';
+        font-family: 'material-icons';
+        color: $white;
+        font-size: 20px;
+      }
+    }
+  }

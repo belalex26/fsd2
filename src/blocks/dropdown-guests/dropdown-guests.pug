@@ -1,0 +1,15 @@
+mixin dropdown-guests(options)
+    .dropdown
+        .dropdown__triger
+            p.dropdown__text Сколько гостей
+        .dropdown__content
+            ul.dropdown__guests-list
+                each item in options
+                    li.dropdown__guests-item
+                        p.dropdown__guests-text=item.name
+                            button.dropdown__guests-btn(data-direction='minus' aria-label='минус') 
+                            input.dropdown__guests-counter(type=text value=item.value)
+                            button.dropdown__guests-btn(data-direction='plus' aria-label='плюс')
+            button.dropdown__guests-btn-clear очистить
+            button.dropdown__guests-btn-apply(disabled) применить
+

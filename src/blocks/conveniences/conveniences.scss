@@ -1,0 +1,30 @@
+@import '../../scss/colors.scss';
+
+.conveniences {
+  display: flex;
+  line-height: 1.716em;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $dark-shade-10;
+  padding: 0 0 1.43em;
+
+  &_without-border {
+    border: none;
+  }
+
+  &__info {
+    margin-left: 10px;
+  }
+
+  &__title {
+    font-family: montserrat, OpenSans, sans-serif;
+    font-weight: bold;
+  }
+
+  &__icon {
+    font-family: 'material-icons';
+    font-size: 3.43em;
+    line-height: 0.85em;
+    background: $gradient;
+  }
+}
