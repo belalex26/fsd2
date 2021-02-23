@@ -3,17 +3,45 @@
 .range-dates {
 
   &__content {
-    display: grid;
-    grid-template-columns: 150px 150px;
-    grid-column-gap: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__title {
+    font-family: "montserrat", "OpenSans", sans-serif;
+    font-weight: 700;
+    color: $dark-shade-100;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: left;
   }
 
   &__input {
+    width: 140px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
     margin-top: 5px;
-    
+    padding: 12px 15px;
+    font-size: 14px;
+    background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 93% 49%;
 
     &::placeholder {
+      color: $dark-shade-25;
       letter-spacing: 0.9;
     }
+  
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: 1px solid $dark-shade-50;
+      color: $dark-shade-75;
+
+      &::placeholder {
+        color: $dark-shade-75;
+      }
+    }
   }
+  
 }

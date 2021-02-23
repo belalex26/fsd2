@@ -1,12 +1,30 @@
+@import "../../scss/colors.scss";
+
 .filter-date__input {
-    width: 9.375rem;
-    height: 2.75rem;
-    border: 0.0625rem solid rgba(31, 32, 65, 0.25);
-    border-radius: 0.25rem;
-    padding: 0rem 0rem 0.0625rem 0.875rem;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    color: rgba(31, 32, 65, 0.75);
-    background: #fff url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 7.125rem 0.6875rem;
-    box-sizing: border-box;
+  width: 266px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  margin-top: 5px;
+  padding: 12px 15px;
+  font-size: 14px;
+  background-image: url('./../../blocks/filter-date/images/expand_more.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: 95% 49%;
+    
+  &::placeholder {
+    color: $dark-shade-25;
   }
+  
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    border: 1px solid $dark-shade-50;
+    color: $dark-shade-75;
+
+    &::placeholder {
+      color: $dark-shade-75;
+    }
+  }
+}

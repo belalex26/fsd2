@@ -1,12 +1,8 @@
-include ../calendar/calendar
-include ../dropdown-field/dropdown-field
-
-mixin range-dates({ inLabel, outLabel })
+mixin range-dates({titleIn, titleOut, data})
+ 
   .range-dates
-    +calendar()
     .range-dates__content
-      +dropdown-field({ title: inLabel, style: "range-dates", placeholder: "ДД.ММ.ГГГГ" })
-        .range-dates__input
-      +dropdown-field({ title: outLabel, style: "range-dates", placeholder: "19.08.2019" })
-        .range-dates__input
-      
+      label.range-dates__title= titleIn
+        input.datepicker-here.range-dates__input#range-dates__start-date(type="text", placeholder="ДД.ММ.ГГГГ", data-range="true", data-multiple-dates-separator=" - ",  data-clear-Button="true" , data-apply-Button="true")
+      label.range-dates__title= titleOut
+        input.range-dates__input#range-dates__end-date(type="text", placeholder="19.08.2019")
