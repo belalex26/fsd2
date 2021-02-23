@@ -1,6 +1,15 @@
 const buttons = document.querySelectorAll('.dropdown__guests-btn');
-const buttonClear = document.querySelectorAll ('.dropdown__guests-btn-clear');
-const buttonApply = document.querySelectorAll ('.dropdown__guests-btn-apply');
+const buttonClear = document.querySelectorAll('.dropdown__guests-btn-clear');
+const buttonApply = document.querySelectorAll('.dropdown__guests-btn-apply');
+const dataGuest = document.querySelectorAll('.dropdown__guests-counter');
+let countGuests = [];
+
+for (let i=0; i <= dataGuest.length; i++) {
+    countGuests.push(dataGuest[i].value);
+}
+
+console.log(countGuests);
+
 
 document.querySelectorAll('.dropdown__triger').forEach((item) =>
     item.addEventListener('click', () => {
@@ -29,7 +38,11 @@ buttons.forEach(btn => {
 });
 
 buttonClear.forEach(btn => {
-    btn.addEventListener('click', function() {
-        input.value = '0';
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.dropdown__guests-counter')
+            .forEach(function (item) {
+                item.value = "0";
+        });
     });
 });

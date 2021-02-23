@@ -1,6 +1,7 @@
-mixin dropdown-field({title, style, placeholder, value})
+mixin dropdown-field({title, placeholder, value})
   .dropdown-field
     if title
       .dropdown-field__title= title
     label.dropdown-field__wrapper
-      input(class=`dropdown-field__input dropdown-field__input--${style}` placeholder=placeholder value=value)
+      input.dropdown-field__input(placeholder=placeholder value=value)
+      .dropdown-field__content
