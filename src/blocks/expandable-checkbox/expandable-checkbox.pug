@@ -1,11 +1,10 @@
-mixin expandable-checkbox(text)
+include ../checkbox-button/checkbox-button
+
+mixin expandable-checkbox({title, option})
     .expandable-checkbox
         .expandable-checkbox__triger
-            p.expandable-checkbox__text=text
+            p.expandable-checkbox__title= title
         .expandable-checkbox__content
-            ul.expandable-checkbox__list
-            each item in options
-                li.expandable-checkbox__item
-                    label.expandable-checkbox__label
-                        input.expandable-checkbox__input(type="checkbox" name=`${item.name}` checked=item.checked)
-                        span.expandable-checkbox__title=item.content
+            +checkbox-button(option)
+
+            

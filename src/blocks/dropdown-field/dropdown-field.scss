@@ -1,74 +1,60 @@
 @import "../../scss/colors.scss";
 
-.dropdown-field {
+.dropdown-field  {
 
-  &__title {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.75rem;
-    color: $dark-shade-100;
-  }
+    &__wrapper {
+      position: relative;
+    }
 
-  &__icon-wrapper {
-    position: relative;
-/*
-    &:after {
-      position: absolute;
-      font-family: "Material Icons";
-      font-size: 1.5rem;
-      content: "\e313";
-      text-align: center;
-      line-height: 3.625rem;
-      color: $dark-shade-50;
-      top: -18px;
-      right: 10px;
-    }*/
-  }
+    &__input {
+      width: 100%;
+      position: relative;
+      border: 1px solid $dark-shade-25;
+      border-radius: 4px;
+      margin-top: 5px;
+      padding: 12px 15px;
+      font-size: 14px;
+      background-image: url('./../../blocks/dropdown-field/images/expand_more.svg');
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      background-position: 95% 49%;
+    
 
-  &__input {
-    font-size: 14px;
-    line-height: 16px;
-    padding: 12px 40px 14px 14px;
-    width: 100%;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    color: $dark-shade-75;
-  }
-}@import "../../scss/colors.scss";
+      &::placeholder {
+          color: $dark-shade-25;
+      }
+  
+      &:hover,
+      &:focus,
+      &:active {
+          outline: none;
+          border: 1px solid $dark-shade-50;
+          color: $dark-shade-75;
 
-.dropdown-field {
+          &::placeholder {
+              color: $dark-shade-75;
+          }
+      }
+      &--range-dates {
+        background-position: 90% 49%;
+      }
+    }
 
-  &__title {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.75rem;
-    color: $dark-shade-100;
-  }
+    &__title {
+      font-family: "montserrat", "OpenSans", sans-serif;
+        font-weight: 700;
+        color: $dark-shade-100;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
 
-  &__icon-wrapper {
-    position: relative;
+};
 
-    /*&:after {
-      position: absolute;
-      font-family: "Material Icons";
-      font-size: 1.5rem;
-      content: "\e313";
-      text-align: center;
-      line-height: 3.625rem;
-      color: $dark-shade-50;
-      top: -18px;
-      right: 10px;
-    }*/
-  }
+.dropdown-field--active .dropdown-field__content {
+    display: block;
+}
 
-  &__input {
-    font-family: Montserrat, OpenSans, sans-serif;
-    font-size: 0.875rem;
-    line-height: 16px;
-    padding: 12px 40px 14px 14px;
-    width: 100%;
-    border: 1px solid $dark-shade-25;
-    border-radius: 4px;
-    color: $dark-shade-75;
-  }
+.dropdown-field--range-data .dropdown-field__input {
+  background-position: 90% 49%;
 }

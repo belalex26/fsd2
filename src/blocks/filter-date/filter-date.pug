@@ -1,8 +1,2 @@
-include ../dropdown-field/dropdown-field
-include ../calendar/calendar
-
-mixin filter-date({title, placeholder})
-    .filter-date
-        +dropdown-field({title, placeholder})
-        .filter-date__calendar
-            +calendar()
+mixin filter-date(data)
+     input.datepicker-here.filter-date__input(type="text" placeholder="ДД.ММ.ГГГГ" data-clear-Button="true" data-apply-Button="true")

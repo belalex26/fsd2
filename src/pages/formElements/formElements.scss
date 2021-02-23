@@ -1,9 +1,58 @@
-.container {
-    width: 320px;
+@import '../../scss/colors.scss';
+
+.form-elements {
+    margin: 0 auto;
+
+    &__logo {
+        padding: 30px 30px;
+    }
+
+    &__main {
+        display: grid;
+        max-width: 1200px;
+    }
+
+    &__container {
+        margin-top: 32px;
+        padding-left: 138px;
+        display: grid;
+        grid-template-columns: 320px 320px 320px;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        gap: 120px;
+    }
+
+    &__item {
+        width: 320px;
+        padding-bottom: 16px;
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 3px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        font-family: "montserrat", "OpenSans", sans-serif;
+        font-weight: 700;
+        color: $dark-shade-100;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        font-weight: 400;
+        font-size: 12px;
+        color: $dark-shade-50;
+        text-transform: uppercase;
+    }
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 350px, 350px, 350px;
-    grid-column-gap: 120px;
+.form-elements__footer {
+    margin-left: 20px;
+    margin-bottom: 40px;
 }

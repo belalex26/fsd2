@@ -1,11 +1,7 @@
-mixin conveniences({noBorder, title, desc, icon})
-  - let classes = ["conveniences"]
-  if noBorder
-    - classes.push("conveniences_without-border")
-  div(class=classes)
-    
-    i.conveniences__icon.material-icons= icon
-    
+mixin conveniences({image, title, desc})
+  .conveniences
+    .conveniences__img-container
+      img.conveniences__img(src=require(`blocks/conveniences/images/${image}`) alt="conveniences icon")
     .conveniences__info
       .conveniences__title= title
       div.conveniences__description= desc

@@ -64,27 +64,28 @@ module.exports = {
           }
         ]
       },
+
       {
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        exclude: /fonts/,
-        use: [
-          {
-            loader: 'file-loader',
-                options: {
-                    name: './img/[name].[ext]',
-                    context: path.resolve(__dirname, "src/"),
-                    // publicPath: '../',
-                    useRelativePaths: true
-                }
-          }]
+        test: /\.(png|jpg|jpeg|svg|gif)$/,
+        exclude: [
+          path.resolve(__dirname, 'src/fonts'),
+        ],
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'images',
+            publicPath: "../images"
+          },
         },
+      },
     ],
   },
 
   plugins: [
     new CleanWebpackPlugin(),
     ...PAGES.map((page) => new HtmlWebpackPlugin({
-      filename: `${page}.html`,
+      filename: `pages/${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
     })),
     new MiniCssExtractPlugin({

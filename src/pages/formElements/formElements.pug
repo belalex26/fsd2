@@ -1,24 +1,25 @@
 head
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(href='assets/fonts/montserrat-regular.woff' as='font')
-  link(href='assets/fonts/material-icons-regular.woff' as='font')
-  link(href='assets/fontsfa-brands-400.woff' as='font')
-  link(rel='stylesheet', href='css/main.css')
+  link(href='../fonts/montserrat-regular.woff' as='font')
+  link(href='../fonts/material-icons-regular.woff' as='font')
+  link(rel='stylesheet', href='../css/main.css')
   title Form Elements FSD2
 
-  include ../../blocks/range-slider/range-slider.pug
-  include ../../blocks/range-dates/range-dates.pug
-  include ../../blocks/text-field/text-field.pug
-  include ../../blocks/button/button.pug
-  include ../../blocks/bullet-list/bullet-list.pug
-  include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons.pug
-  include ../../blocks/expandable-checkbox/expandable-checkbox.pug
-  include ../../blocks/checkbox-button/checkbox-button.pug
-  include ../../blocks/radio-button/radio-button.pug
-  include ../../blocks/toggle-button/toggle-button.pug
-  include ../../blocks/like-button/like-button.pug
-  include ../../blocks/rating/rating.pug
+  include ../../blocks/kit-logo/kit-logo
+  include ../../blocks/dropdown-field/dropdown-field
+  include ../../blocks/range-slider/range-slider
+  include ../../blocks/range-dates/range-dates
+  include ../../blocks/text-field/text-field
+  include ../../blocks/button/button
+  include ../../blocks/bullet-list/bullet-list
+  include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons
+  include ../../blocks/expandable-checkbox/expandable-checkbox
+  include ../../blocks/checkbox-button/checkbox-button
+  include ../../blocks/radio-button/radio-button
+  include ../../blocks/toggle-button/toggle-button
+  include ../../blocks/like-button/like-button
+  include ../../blocks/rating/rating
   include ../../blocks/comment/comment
   include ../../blocks/pagination/pagination
   include ../../blocks/filter-date/filter-date
@@ -26,59 +27,103 @@ head
   include ../../blocks/dropdown-room/dropdown-room
   include ../../blocks/conveniences/conveniences
 
-  body.body
-    main.main
-      .container
-        .range-slider
-          +slider({
-              title: "Range slider",
-              type: "double",
-              min: "500",
-              max: "15000",
-              from: "5000",
-              to: "10000"
-              })
+  include ../../blocks/calendar/calendar
 
-        .main__range-dates
-          +range-dates({
-            inLabel: "Date dropdown",
-            outLabel: "Date dropdown"
-          })
-        .main__text-field
-          +text-field('', 'text', 'имя')
-          +text-field('subscripton', 'email', 'email')
-        .main__button
-          +button('fill', 'click me', '#')
-          +button('fill-hover', 'click me', '#')
-        
-          +button('border', 'click me', '#')
-          +button('border-hover', 'click me', '#')
+  body.form-elements
+    header.form-elements__header
+      .form-elements__logo
+        +kit-logo()
 
-          +button('long', 'перейти к оплате', '#')
-           
-          +button('not-border-purple', 'click me', '#')
-          +button('not-border-grey', 'click me', '#')
+    main.form-elements__main
+      .form-elements__container
+        .form-elements__left-container
 
-        .main__bullet-list
-          +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Text field
+              .form-elements__desc Default
+            +text-field({type: "email", placeholder: "Email"})
 
-        .rich-checkbox
-          +rich-checkbox([
-                {
-                    name: 'opt',
-                    header: 'Широкий коридор', 
-                    content: 'Ширина коридоров в номере не менее 91 см.'
-                },
-                {
-                    name: 'opt',
-                    header: 'Помощник для инвалидов' , 
-                    content: 'На 1 этаже вас встретит специалист  и проводит до номера.'
-                },
-            ])
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Text field
+              .form-elements__desc Hover/Focus
+            +text-field({style: "focused", type: "email", placeholder: "This is pretty awesome"})
 
-        .checkbox-button
-          +checkbox-button(
-            [
+          .form-elements__item.form-elements__dropdown
+            .form-elements__head
+              .form-elements__title Dropdown
+            +dropdown-field({placeholder: "Сколько гостей"})
+
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Masked text field
+            +text-field({type: "data", placeholder: "ДД.ММ.ГГГГ"})
+
+          .form-elements__item
+            +range-dates({
+              inLabel: "Date dropdown",
+              outLabel: "Date dropdown"
+            })
+
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Filter date dropdown
+            +filter-date()
+          
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Subscription text field 
+            +text-field({style: "subscripton", type: "email", placeholder: "Email"})
+          
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Dropdown
+              .form-elements__desc Default
+            +dropdown-room(
+              [
+                  {
+                      name: 'спальни',
+                      value: '2', 
+                  },
+                  {
+                      name: 'кровати',
+                      value: 2,
+                  },
+                  {
+                      name: 'ванные комнаты',
+                      value: 0, 
+                  }
+                  
+              ]     
+            )
+
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Dropdown
+              .form-elements__desc Expanded
+            +dropdown-room(
+              [
+                  {
+                      name: 'спальни',
+                      value: '2', 
+                  },
+                  {
+                      name: 'кровати',
+                      value: 2,
+                  },
+                  {
+                      name: 'ванные комнаты',
+                      value: 0, 
+                  }
+                  
+              ]     
+            )
+          
+          .form-elements__item
+            +expandable-checkbox({
+              title: 'expondable',
+              option: [
                 {
                     name: 'optionally',
                     value: 'smoke', 
@@ -97,52 +142,74 @@ head
                     content: 'Можно пригласить гостей (до 10 человек)'
                 }
                 
-            ]     
-        )
+              ]     
+            })
 
-        .radio-button
-          +radio-button('gender', 'man', 'Мужчина')
-          +radio-button('gender', 'woman', 'Женщина')
-
-        .toggle
-          +toggle-button('Получать спецпредложения')
-        .like
-          +like({
-            likes: 2,
-            liked: false
-          })
-        .main__rating
-          +rating(4)
+          .form-elements__item
+            +conveniences({
+            image: "comfort.svg",
+            title: "Комфорт",
+            desc: "Шумопоглощающие стены",
+            })
+            +conveniences({
+              image: "conveniences.svg",
+              title: "Удобство",
+              desc: "Окно в каждой из спален",
+            })
+        
+        .form-elements__mid-container
+          .form-elements__item
+            +checkbox-button(
+              [
+                {
+                    name: 'optionally',
+                    value: 'smoke', 
+                    content: 'Можно курить'
+                },
+                {
+                    name: 'optionally',
+                    value: 'pets', 
+                    checked: 'true',
+                    content: 'Можно с питомцами'
+                },
+                {
+                    name: 'optionally',
+                    value: 'guests', 
+                    checked: 'true',
+                    content: 'Можно пригласить гостей (до 10 человек)'
+                }
+                
+              ]     
+            )
           
-          +comment({
-            image: "man.png",
-            author: "Мурад Сарафанов",
-            date: "5 дней назад",
-            text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
-            like: {
-              liked: true,
-              likes: 12
-            }
-          })
+          .form-elements__item
+            +radio-button('gender', 'man', 'Мужчина')
+            +radio-button('gender', 'woman', 'Женщина')
 
-          +pagination({ 
-            text: "1 &ndash; 12 из 100+ вариантов аренды",
-            items: [
-              { link: "/mock-address", text: "1", active: true },
-              { link: "/mock-address", text: "2" },
-              { link: "/mock-address", text: "3" },
-              { text: "..." },
-              { link: "/mock-address", text: "15" },
-            ]
-          })
+          .form-elements__item
+            +toggle-button('Получать спецпредложения')
 
+          .form-elements__item
+            +toggle-button('Получать спецпредложения')
 
-          +filter-date({ 
-            title: "Filter date dropdown",
-            placeholder: "19 авг - 23 авг" })
+          .form-elements__item
+            +like({
+              likes: 2,
+              liked: false
+            })
 
-          +dropdown-guests(
-            [
+            +like({
+              likes: 12,
+              liked: true
+            })
+
+          .form-elements__item
+            +rating(4)
+
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Dropdown
+            +dropdown-guests([
                 {
                     name: 'взрослые',
                     value: '2', 
@@ -156,34 +223,96 @@ head
                     value: 0, 
                 }
                 
-            ]     
-        )
-        
-          +dropdown-room(
-            [
+              ])
+          
+          .form-elements__item
+            +rich-checkbox([
                 {
-                    name: 'спальни',
+                    name: 'opt',
+                    header: 'Широкий коридор', 
+                    content: 'Ширина коридоров в номере не менее 91 см.'
+                },
+                {
+                    name: 'opt',
+                    header: 'Помощник для инвалидов' , 
+                    content: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                },
+            ])
+
+        .form-elements__right-container
+
+          .form-elements__item
+            +slider({
+              title: "Range slider",
+              type: "double",
+              min: "500",
+              max: "15000",
+              from: "5000",
+              to: "10000"
+            })
+
+          .form-elements__item.form-elements__buttons
+            +button('fill', 'click me', '#')
+            +button('fill-hover', 'click me', '#')
+          
+            +button('border', 'click me', '#')
+            +button('border-hover', 'click me', '#')
+          
+          .form-elements__item.form-elements__buttons-no-border
+            +button('not-border-purple', 'click me', '#')
+            +button('not-border-grey', 'click me', '#')
+
+          .form-elements__item.form-elements__buttons-long
+            +button('long', 'перейти к оплате', '#')
+
+          .form-elements__item
+            +pagination({ 
+              text: "1 &ndash; 12 из 100+ вариантов аренды",
+              items: [
+                { link: "/mock-address", text: "1", active: true },
+                { link: "/mock-address", text: "2" },
+                { link: "/mock-address", text: "3" },
+                { text: "..." },
+                { link: "/mock-address", text: "15" },
+              ]
+            })
+
+          .form-elements__item
+            .form-elements__head
+              .form-elements__title Dropdown
+            +dropdown-guests([
+                {
+                    name: 'взрослые',
                     value: '2', 
                 },
                 {
-                    name: 'кровати',
+                    name: 'дети',
                     value: 2,
                 },
                 {
-                    name: 'ванные комнаты',
+                    name: 'младенцы',
                     value: 0, 
                 }
                 
-            ]     
-        )
+              ])
 
-          +conveniences({
-            title: "Комфорт",
-            desc: "Шумопоглощающие стены",
-            icon: "tag_faces"
+          .form-elements__item
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00'
+            ])
+        
+        .form-elements__bot-container
+          +comment({
+            image: "man.png",
+            author: "Мурад Сарафанов",
+            date: "5 дней назад",
+            text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.",
+            like: {
+              liked: true,
+              likes: 12
+            }
           })
-          +conveniences({
-            title: "Удобство",
-            desc: "Окно в каждой из спален",
-            icon: "location_city"
-          })
+    footer.form-elements__footer
+      +calendar()         

@@ -30,6 +30,6 @@ buttons.forEach(btn => {
 
 buttonClear.forEach(btn => {
     btn.addEventListener('click', function() {
-        input.value = 0;
+        input.value = '0';
     });
 });

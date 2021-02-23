@@ -4,37 +4,42 @@
     width: 100%;
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
-    padding: 13px 15px;
+    padding: 12px 15px;
     font-size: 14px;
-    color: $dark-shade-25;
 
+    &::placeholder {
+        color: $dark-shade-25;
+    }
+  
     &:hover,
     &:focus,
-    &:active
-    {
+    &:active {
         outline: none;
         border: 1px solid $dark-shade-50;
+        color: $dark-shade-75;
+
+        &::placeholder {
+            color: $dark-shade-75;
+        }
+    }
+}
+
+.text-field__input--focused {
+    border: 1px solid $dark-shade-50;
+    color: $dark-shade-75;
+
+    &::placeholder {
         color: $dark-shade-75;
     }
 }
 
-.text-field__input::placeholder {
-    line-height: 18px;
-    color: $dark-shade-25;
-}
 
 .text-field__input--subscripton {
     position: relative;
-    width: 80%;
-    
-    &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 50px;
-        height: 50px;
-        top: 0;
-        right: 0;
-        background: url(arrowSubscr.svg) no-repeat center;
-    }
+    display: block;
+    width: 83%;
+    background-image: url("../../blocks/text-field/images/arrowSubscr.svg");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 95.5% center;
 }
