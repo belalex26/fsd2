@@ -4,12 +4,6 @@ const buttonApply = document.querySelectorAll('.dropdown__guests-btn-apply');
 const dataGuest = document.querySelectorAll('.dropdown__guests-counter');
 let countGuests = [];
 
-for (let i=0; i <= dataGuest.length; i++) {
-    countGuests.push(dataGuest[i].value);
-}
-
-console.log(countGuests);
-
 
 document.querySelectorAll('.dropdown__triger').forEach((item) =>
     item.addEventListener('click', () => {

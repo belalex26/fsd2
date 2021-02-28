@@ -1,31 +1,22 @@
 @import "../../scss/colors.scss";
-@import "./ion.rangeSlider.min.css";
+// @import "./nouislider.min.css";
 
-.slider {
-  font-family: Montserrat, OpenSans, sans-serif;
-  text-transform: uppercase;
-  font-size: .75rem;
-  line-height: .625rem;
+.noUi-base {
+    width: 266px;
+    height: 6px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 3px;
+    background-color: $white;
+}
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-  }
+.noUi-connects {
+    background: $light-gradient;
+}
 
-  &__title {
-    font-weight: bold;
-    color: $dark-shade-100;
-  }
-
-  &__min-max {
-    text-align: right;
-    color: $dark-shade-50;
-  }
-
-  &__footer {
-    text-transform: none;
-    line-height: .875rem;
-    color: $dark-shade-50;
-    margin-top: 6px;
-  }
+.noUi-handle {
+    width: 12px;
+    height: 12px;
+    border: 1px solid $light-gradient;
+    border-radius: 50%;
+    background-color: $light-gradient;
 }

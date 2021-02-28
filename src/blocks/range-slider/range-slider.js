@@ -1,28 +1,12 @@
-import 'ion-rangeslider';
+import noUiSlider from 'nouislider';
 
-class Slider {
-  constructor() {
-    this.init();
-  }
+const slider = document.getElementById('slider');
 
-  init() {
-    const element = $('.js-slider');
-    this.minMax = element.parent().find('.slider__min-max');
-
-    this.slider = element.ionRangeSlider({
-      hide_from_to: true,
-      onChange: this.updateLabel.bind(this),
-      onStart: this.onStart.bind(this),
-    });
-  }
-
-  updateLabel(data) {
-    $(this.minMax).html(`${data.from_pretty}&#8381; - ${data.to_pretty}&#8381;`);
-  }
-
-  onStart(data) {
-    this.updateLabel(data);
-  }
-}
-
-export default Slider;
+noUiSlider.create(slider, {
+    start: [20, 80],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
