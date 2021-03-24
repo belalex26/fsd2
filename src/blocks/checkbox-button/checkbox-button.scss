@@ -1,9 +1,13 @@
 @import '../../scss/colors.scss';
 
+.checkbox__list {
+    padding: 0;
+}
+
 .checkbox__item {
     list-style: none;
     color: $dark-shade-50;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     width: 89%;
 }
 
@@ -17,7 +21,7 @@
 .checkbox__text {
     display: grid;
     position: relative;
-    grid-template-columns: 25px auto;
+    grid-template-columns: 20px 192px;
     grid-column-gap: 10px;
     cursor: pointer;
     font-weight: 400;
@@ -31,8 +35,8 @@
         display: block;
         grid-column-start: 1;
         grid-column-end: 2;
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
         border: 1px solid $dark-shade-25;
         border-radius: 4px;
 
@@ -48,8 +52,8 @@
         position: absolute;
         width: 10px;
         height: 10px;
-        top: 5px;
-        left: 6px;
+        top: 4.5px;
+        left: 5px;
         background: url('./../../blocks/checkbox-button/images/checkbox-checked.svg') no-repeat center;
         opacity: 0;
     }

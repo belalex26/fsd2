@@ -5,10 +5,10 @@ const dataGuest = document.querySelectorAll('.dropdown__guests-counter');
 let countGuests = [];
 
 
-document.querySelectorAll('.dropdown__triger').forEach((item) =>
+document.querySelectorAll('.dropdown-guests__triger').forEach((item) =>
     item.addEventListener('click', () => {
         const parent = item.parentNode;
-        parent.classList.toggle('dropdown--active');
+        parent.classList.toggle('dropdown-guests--active');
     })
 );
 

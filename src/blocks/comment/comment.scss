@@ -1,0 +1,43 @@
+@import '../../scss/colors.scss';
+
+.comment {
+    width: 730px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 67px auto;
+    grid-column-gap: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark-shade-75;
+    line-height: 24px;
+
+    &__avatar-container {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    &__author-container {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    &__like {
+        position: absolute;
+        top: 71px;
+        left: 24px;
+    }
+
+    &__author {
+        font-weight: 700;
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+
+    &__date {
+        margin: 0px;
+    }
+
+    &__text {
+        margin-top: 9px;
+    }
+}

@@ -1,12 +1,18 @@
-mixin dropdown-room(options)
-    .dropdown
-        .dropdown__triger
-            p.dropdown__text 2 спальни, 2 комнаты
-        .dropdown__content
-            ul.dropdown__room-list
-                each item in options
-                    li.dropdown__room-item
-                        p.dropdown__room-text=item.name
-                            button.dropdown__room-btn(data-direction='minus' aria-label='минус') 
-                            input.dropdown__room-counter(type=text value=item.value)
-                            button.dropdown__room-btn(data-direction='plus' aria-label='плюс')
+mixin dropdown-room({placeholder, value, option})
+    .dropdown-room
+        .dropdown-room__triger
+            label.dropdown-room__title
+                input.dropdown-room__input(type="text" placeholder=placeholder value=value)
+        .dropdown-room__content
+            ul.dropdown-room__list
+                each item in option
+                    li.dropdown-room__item
+                        p.dropdown-room__text=item.name
+                        .dropdown-room__control
+                            button.dropdown-room__btn.dropdown-room__btn--minus(data-direction='minus' aria-label='минус') &#8722;
+                            input.dropdown-room__counter(type=number value=item.value)
+                            button.dropdown-room__btn.dropdown-room__btn--plus(data-direction='plus' aria-label='плюс') &#43;
+
+
+        
+

@@ -1,7 +1,28 @@
 @import '../../scss/colors.scss';
 
-.expandable-checkbox__content {
-    display: none;
+.expandable-checkbox {
+    width: 266px;
+
+    &__content {
+        display: none;
+    }
+
+    &__title {
+        font-family: "montserrat", "OpenSans", sans-serif;
+        font-weight: 700;
+        color: $dark-shade-100;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+
+    &__triger {
+        padding-top: 10px;
+        background-image: url('./../../blocks/dropdown-field/images/expand_more.svg');
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: 94% 100%;
+    }
 }
 
 .expandable-checkbox--active .expandable-checkbox__content {

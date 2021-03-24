@@ -4,9 +4,9 @@ mixin comment({image, author, date, like, text})
   article.comment
     .comment__avatar-container
       img.comment__avatar(src=require(`blocks/comment/images/${image}`) alt="user avatar")
-    div.comment__author-container
-      .comment__author= author
-      .comment__date= date
+    .comment__author-container
+      p.comment__author= author
+      p.comment__date= date
+      p.comment__text= text
     .comment__like
       +like(like)
-    .comment__text= text

@@ -1,24 +1,22 @@
 @import '../../scss/colors.scss';
 
 .radio {
-    margin-bottom: 16px;
-    margin-top: 16px;
     font-size: 14px;
-  }
+    display: inline-flex;
   
-  .radio__name {
-        position: absolute;
-      z-index: -1;
-      opacity: 0;
-      margin: 16px 0 0 16px;
+  &__name {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 16px 0 0 16px;
   }
-  
-  .radio__text {
+
+  &__text {
     display: block;
     position: relative;
-    padding: 16px 0 0 16px;
+    padding: 16px 19px 0 16px;
     cursor: pointer;
-    margin-left: 48px;
+    margin-left: 16px;
     color: $dark-shade-75;
   
     &::before {
@@ -44,6 +42,7 @@
       opacity: 0;
     }
   }
+}
   
   .radio__name:checked + .radio__text::after {
     opacity: 1;

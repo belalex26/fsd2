@@ -3,5 +3,5 @@ mixin conveniences({image, title, desc})
     .conveniences__img-container
       img.conveniences__img(src=require(`blocks/conveniences/images/${image}`) alt="conveniences icon")
     .conveniences__info
-      .conveniences__title= title
-      div.conveniences__description= desc
+      p.conveniences__title= title
+      p.conveniences__description= desc

@@ -1,25 +1,33 @@
 @import '../../scss/colors.scss';
 
-.bullet-list__item {
-    font-size: 14px;
-    line-height: 24px;
-    color: $dark-shade-75;
-    list-style: none;
-}
+.bullet-list {
+    padding: 0;
+    margin-left: -6px;
+    margin-top: 13px;
 
-.bullet-list__text {
-    position: relative;
-    width: 80%;
-    padding-left: 30px;
+    &__item {
+        font-size: 14px;
+        line-height: 24px;
+        color: $dark-shade-75;
+        list-style: none;
+    }
 
-    &:before {
-        content: '';
-        position: absolute;
-        left: 6px;
-        top: 8px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: $dark-shade-25;
+    &__text {
+        position: relative;
+        width: 74%;
+        padding-left: 27px;
+        margin: 0;
+        margin-bottom: 10px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $dark-shade-25;
+        }
     }
 }

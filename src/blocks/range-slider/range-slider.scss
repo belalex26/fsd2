@@ -1,22 +1,64 @@
 @import "../../scss/colors.scss";
-// @import "./nouislider.min.css";
+@import "./nouislider.min.css";
 
-.noUi-base {
-    width: 266px;
+.slider {
+    font-family: "montserrat", "OpenSans", sans-serif;
+}
+
+.slider__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+}
+
+.slider__title {
+    font-weight: 700;
+    color: $dark-shade-100;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.slider__min-max {
+    font-weight: 400;
+    font-size: 12px;
+    color: $dark-shade-50;
+}
+
+.noUi-horizontal {
     height: 6px;
+    width: 266px;
     border: 1px solid $dark-shade-25;
     border-radius: 3px;
     background-color: $white;
 }
 
 .noUi-connects {
-    background: $light-gradient;
+    background: $white;
+}
+
+.noUi-connect {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 3px;
+    height: 126%;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 15px;
+    height: 15px;
+    right: -14px;
+    border: 2px solid $white;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
 .noUi-handle {
-    width: 12px;
-    height: 12px;
-    border: 1px solid $light-gradient;
-    border-radius: 50%;
-    background-color: $light-gradient;
+    box-shadow: none;
+}
+    
+
+.noUi-handle::before,
+.noUi-handle::after {
+    display: none;
 }

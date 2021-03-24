@@ -3,18 +3,14 @@
 .button {
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.75rem;
+    font-size: 12px;
     text-transform: uppercase;
     color: $white;
     text-align: center;
-    border-radius: 6rem;
+    border-radius: 22px;
     text-decoration: none;
     display: block;
-    width: 6.9rem;
-    padding: 1.05rem 1.1875rem;
-
-    // временный
-    margin: 20px 10px;
+    padding: 14px 5px;
 }    
 
 .button--not-border-purple {
@@ -41,9 +37,8 @@
 
 .button--border {
     color: $purple;
-    padding: 0.85rem 0.8rem;
     background-color: $white;
-    border: 0.125rem solid;
+    border: 1px solid;
     border-color: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
 
     &:hover,
@@ -54,9 +49,9 @@
 
 .button--border-hover {
     color: $purple;
-    padding: 0.85rem 0.8rem;
+    padding: 14px 14px;
     background-color: $white;
-    border: 0.125rem solid;
+    border: 1px solid;
     border-color: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
     opacity: 0.5;
 }
@@ -77,8 +72,8 @@
 
 .button--long {
     position: relative;
-    width: 22rem;
-    letter-spacing: 0.016rem;
+    width: 100%;
+    letter-spacing: 0.9;
     text-align: center;
     background: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
 
@@ -94,7 +89,7 @@
     top: 0;
     right: 0;
     display: block;
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 44px;
+    height: 44px;
     background: url(arrow.svg) no-repeat center;
 }
