@@ -1,0 +1,10 @@
+include ../site-logo/site-logo
+include ../menu/menu
+
+mixin header(data)
+  header.header
+    .header__container
+      +site-logo()
+      +menu(data)
+      
+  
