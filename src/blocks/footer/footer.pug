@@ -1,0 +1,36 @@
+include ../socials/socials
+include ../site-logo/site-logo
+include ../text-field/text-field
+
+mixin footer({main, navigation, copy, subscription: {title, text}})
+  footer.footer
+    .footer__wrapper
+      .footer__container
+        .footer__left-side
+          section.footer__block
+            +site-logo()
+            p.footer__text= main
+
+        .footer__right-side
+          .footer__nav-container
+            each link_block in navigation
+              section.footer__nav
+                .footer__block-header
+                  h3.footer__subtitle= link_block.title
+                p.footer__paragraph
+                  each link in link_block.links
+                    a.footer__link(href=link.url)= link.text
+        
+          section.footer__block
+            .footer__block-header
+              h3.footer__subtitle= title
+            p.footer__paragraph= text
+            .footer__subscription
+              +text-field({style: "subscripton", type: "email", placeholder: "Email"})
+    
+    section.footer__line
+      .footer__wrapper
+        .footer__copy
+          p.footer__paragraph= copy
+          .footer__socials
+            +socials()

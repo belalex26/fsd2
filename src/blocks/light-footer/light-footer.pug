@@ -1,0 +1,8 @@
+include ../socials/socials
+include ../site-logo/site-logo
+
+mixin light-footer({ text })
+  footer.light-footer
+    +site-logo()
+    .light-footer__content= text
+    +socials()
