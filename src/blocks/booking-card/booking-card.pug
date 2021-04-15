@@ -1,0 +1,54 @@
+include ../apartment-info/apartment-info
+include ../price/price
+include ../range-dates/range-dates
+include ../dropdown-guests/dropdown-guests
+include ../invoice/invoice
+include ../button/button
+
+mixin booking-card()
+  .booking-card
+    form.booking-card__form(action="/mock-address", method="post")
+        .booking-card__header
+            +apartment-info({number: 888, lux: true, big: true})
+            +price("9 990")
+
+        .booking-card__range-data
+            +range-dates({
+              titleIn: "Прибытие",
+              titleOut: "Выезд"
+            })
+
+        .booking-card__guests
+            h2.booking-card__guests-title Гости
+            +dropdown-guests({
+                placeholder: "Сколько гостей",
+                option: [
+                  {
+                      name: 'взрослые',
+                      value: 2, 
+                  },
+                  {
+                      name: 'дети',
+                      value: 2,
+                  },
+                  {
+                      name: 'младенцы',
+                      value: 0, 
+                  }
+                ]
+              })
+
+        .booking-card__invoice
+            +invoice({ 
+                standing: "9 990&#8381; х 4 суток",
+                standingPrice: "39 960&#8381;",
+                services: "Сбор за услуги: скидка 2 179&#8381;",
+                servicesPrice: "0&#8381;",
+                additional: "Сбор за дополнительные услуги",
+                additionalPrice: "300&#8381;",
+                total: "38 081&#8381;",
+            })
+
+        .booking-card__btn
+            +button('long', 'забронировать', '#')
+    

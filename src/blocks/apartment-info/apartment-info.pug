@@ -1,0 +1,10 @@
+
+mixin apartment-info({big, lux, number})
+  .appartment-info
+    .apartment-info__number № 
+    if big 
+      h2.apartment-info__number.apartment-info__number_font_large= number 
+    else
+      h3.apartment-info__number.apartment-info__number_font_medium= number 
+    if (lux)
+      .apartment-info__lux-text Люкс

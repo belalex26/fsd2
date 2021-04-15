@@ -1,0 +1,15 @@
+
+@import '../../scss/colors.scss';
+
+.price {
+  font-family: Montserrat, OpenSans, sans-serif;
+  color: $dark-shade-50;
+
+  &__primary {
+    font-weight: bold;
+  }
+
+  &__secondary {
+    font-size: .75rem;
+  }
+}

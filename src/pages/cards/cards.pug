@@ -1,0 +1,43 @@
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(href='../fonts/montserrat-regular.woff' as='font')
+  link(href='../fonts/material-icons-regular.woff' as='font')
+  link(rel='stylesheet', href='../css/main.css')
+  title Cards FSD2
+
+  
+  include ../../blocks/apartments-card/apartments-card
+  include ../../blocks/calendar-card/calendar-card
+  include ../../blocks/register-card/register-card
+  include ../../blocks/booking-card/booking-card
+  include ../../blocks/authorization-card/authorization-card
+   include ../../blocks/images-card/images-card
+  
+
+  body.headers-footers
+    main.headers-footers__main
+      +apartments-card()
+      +register-card()
+      +booking-card()
+      +authorization-card()
+      +calendar-card()
+      +images-card({
+        image: "room-1.jpg",
+        arrows: true,
+        position: 888,
+        lux: true,
+        price: "9 990",
+        rating: 5,
+        comments: 145
+      })
+
+      +images-card({
+        image: "room-2.jpg",
+        arrows: false,
+        position: 840,
+        lux: false,
+        price: "9 990",
+        rating: 4,
+        comments: 65
+      })

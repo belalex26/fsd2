@@ -1,0 +1,54 @@
+@import '../../scss/colors.scss';
+
+.invoice {
+  line-height: 24px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &_font_large {
+      font-family: Quicksand, OpenSans, sans-serif;
+      font-weight: bold;
+      color: $dark-shade-100;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    position: relative;
+    bottom: 20px;
+    border-bottom: 1px dashed $dark-shade-25;
+    width: 60%;
+  }
+
+  &__block {
+    display: table-cell;
+    font-size: 16px;
+  }
+
+  &__service {
+    position: relative;
+    padding-right: 24px;
+    width: 80%;
+    line-height: 24px;
+
+    &_with-icon::after {
+      position: absolute;
+      content: 'i';
+      top: 0;
+      right: 0;
+      font-family: Montserrat, OpenSans, sans-serif;
+      font-weight: bold;
+      color: $dark-shade-25;
+      border: 1px solid $dark-shade-25;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}

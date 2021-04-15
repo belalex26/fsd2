@@ -1,0 +1,37 @@
+include ../range-dates/range-dates
+include ../dropdown-guests/dropdown-guests
+include ../button/button
+
+mixin apartments-card()
+  .apartments-card
+    h1.apartments-card__title Найдем номера под ваши пожелания
+    form.apartments-card__form(action="/mock-address", method="get")
+      .apartments-card__body
+        .apartments-card__range-data
+          +range-dates({
+            titleIn: "Прибытие",
+            titleOut: "Выезд"
+          })
+
+        .apartments-card__guests
+            h2.booking-card__guests-title Гости
+            +dropdown-guests({
+                placeholder: "Сколько гостей",
+                option: [
+                  {
+                      name: 'взрослые',
+                      value: 2, 
+                  },
+                  {
+                      name: 'дети',
+                      value: 2,
+                  },
+                  {
+                      name: 'младенцы',
+                      value: 0, 
+                  }
+                ]
+              })
+          
+        .apartments-card__btn
+            +button('long', 'подобрать номер', '#')
