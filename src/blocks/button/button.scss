@@ -76,6 +76,8 @@
     letter-spacing: 0.9;
     text-align: center;
     background: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
+    padding-left: 0;
+    padding-right: 0;
 
     &:hover,
     &:active {

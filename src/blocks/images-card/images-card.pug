@@ -7,11 +7,11 @@ mixin images-card({image, arrows, position, lux, price, rating, comments})
   .images-card
     +gallery(image, arrows)
     .images-card__body
-      .images-card__row.images-card__row_underlined
+      .images-card__apartment-info
         +apartment-info({number: position, lux: lux})
         +price(price)
-      .images-card__row
+      .images-card__rating
         +rating(rating)
-        .image-card__comments
-          .images-card__text.images-card__text_accented= comments
-          .images-card__text &nbsp;Отзывов
+        .images-card__comments
+          p.images-card__text.images-card__text-accented= comments
+          p.images-card__text &nbsp;Отзывов

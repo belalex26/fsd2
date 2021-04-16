@@ -4,7 +4,7 @@ include ../button/button
 
 mixin apartments-card()
   .apartments-card
-    h1.apartments-card__title Найдем номера под ваши пожелания
+    h2.apartments-card__title Найдём номера под ваши пожелания
     form.apartments-card__form(action="/mock-address", method="get")
       .apartments-card__body
         .apartments-card__range-data
@@ -14,7 +14,7 @@ mixin apartments-card()
           })
 
         .apartments-card__guests
-            h2.booking-card__guests-title Гости
+            h3.apartments-card__guests-title Гости
             +dropdown-guests({
                 placeholder: "Сколько гостей",
                 option: [

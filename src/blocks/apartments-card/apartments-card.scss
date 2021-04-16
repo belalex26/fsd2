@@ -1,0 +1,14 @@
+.apartments-card {
+    padding: 19px 30px 15px 30px;
+
+    &__guests-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 21px;
+        margin-bottom: 2px;
+    }
+
+    &__guests {
+        margin-bottom: 30px;
+    }
+}

@@ -4,7 +4,6 @@
     display: flex;
   
     &__number {
-      font-family: Quicksand, OpenSans, sans-serif;
       display: inline-block;
       color: $dark-shade-100;
       font-size: 14px;
@@ -13,22 +12,22 @@
       text-transform: uppercase;
       margin: 0;
   
-      &_font_medium {
+      &-medium {
         font-size: 18px;
       }
   
-      &_font_large {
-        font-size: 18px;
+      &-large {
+        font-size: 24px;
       }
     }
       
     &__lux-text {
-      font-family: Montserrat, OpenSans, sans-serif;
-      font-size: 14px;
+      font-size: 12px;
       color: $purple;
       padding-right: 4px;
       font-weight: bold;
       text-transform: uppercase;
       display: inline-block;
+      letter-spacing: -0.1px;
     } 
   }

@@ -2,14 +2,14 @@
 @import '../../scss/colors.scss';
 
 .price {
-  font-family: Montserrat, OpenSans, sans-serif;
   color: $dark-shade-50;
+  font-size: 14px;
 
   &__primary {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   &__secondary {
-    font-size: .75rem;
+    font-size: 12px;
   }
 }

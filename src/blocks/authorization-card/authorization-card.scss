@@ -1,0 +1,33 @@
+.authorization-card {
+    padding: 16px 30px 30px 30px;
+
+    &__title {
+        margin-bottom: 22px;
+    }
+
+    &__first-name {
+        margin-bottom: 10px;
+    }
+
+    &__subname {
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        margin-bottom: 30px;
+    }
+
+    &__register {
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 186px 99px;
+        gap: 35px;
+
+        &-text {
+            display: inline-block;
+            letter-spacing: -0.2px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+    }
+}

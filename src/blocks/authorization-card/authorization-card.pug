@@ -3,18 +3,18 @@ include ../text-field/text-field
 
 mixin authorization-card()
   .authorization-card
-    h1.register-card__title Войти
-    form.register-card__form(action="/mock-address" method="post")
-
-      .authorization-card__service
-        .authorization-card__item
-          +text-field({type: "email", placeholder: "Email"})
-        .authorization-card__item
-          +text-field({type: "password", placeholder: "Пароль"})
-
-
+    h2.authorization-card__title Войти
+    form.authorization-card__form(action="/mock-address" method="post")
+      .authorization-card__first-name
+        +text-field({type: "email", placeholder: "Email"})
+      .authorization-card__subname
+        +text-field({type: "password", placeholder: "Пароль"})
       .authorization-card__btn
         +button('long', 'войти', '#')
+
+    .authorization-card__register
+      p.authorization-card__register-text Нет аккаунта на Toxin?
+      +button('border', 'создать', '#')
 
 
       

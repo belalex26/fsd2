@@ -4,12 +4,12 @@ mixin invoice({ standing, standingPrice, services, servicesPrice, additional, ad
       .invoice__service!= standing
       div.invoice__sum!= standingPrice
     .invoice__row
-      .invoice__service.invoice__service_with-icon!= services
+      .invoice__service.invoice__service-with-icon!= services
       div.invoice__sum!= servicesPrice
     .invoice__row
-      .invoice__service.invoice__service_with-icon= additional
+      .invoice__service.invoice__service-with-icon= additional
       div.invoice__sum!= additionalPrice
-    .invoice__row.invoice__row_font_large
-      h2.invoice__block Итого
+    .invoice__row-total.invoice__row-font-large
+      p.invoice__total-text Итого
       .invoice__line
-      h2.invoice__block!= total
+      p.invoice__total-sum= total

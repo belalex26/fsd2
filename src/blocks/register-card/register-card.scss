@@ -1,0 +1,56 @@
+.register-card {
+    padding: 19px 30px 27px 30px;
+
+    &__first-name {
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    &__radio {
+        margin-top: -5px;
+    }
+
+    &__birthday-title {
+        margin-top: 26px;
+        margin-bottom: 4px;
+    }
+
+    &__service-title {
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    &__email {
+        margin-bottom: 11px;
+    }
+
+    &__password {
+        margin-bottom: 9px;
+    }
+
+    &__proposal {
+        margin-bottom: 24px;
+    }
+
+    &__payment-btn {
+        margin-bottom: 30px;
+    }
+
+    &__auth {
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: 186px 99px;
+        gap: 35px;
+
+        &-text {
+            display: inline-block;
+            letter-spacing: -0.2px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+    }
+}

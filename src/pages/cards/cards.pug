@@ -6,38 +6,52 @@ head
   link(rel='stylesheet', href='../css/main.css')
   title Cards FSD2
 
-  
+  include ../../blocks/kit-logo/kit-logo
   include ../../blocks/apartments-card/apartments-card
   include ../../blocks/calendar-card/calendar-card
   include ../../blocks/register-card/register-card
   include ../../blocks/booking-card/booking-card
   include ../../blocks/authorization-card/authorization-card
-   include ../../blocks/images-card/images-card
+  include ../../blocks/images-card/images-card
   
 
-  body.headers-footers
-    main.headers-footers__main
-      +apartments-card()
-      +register-card()
-      +booking-card()
-      +authorization-card()
-      +calendar-card()
-      +images-card({
-        image: "room-1.jpg",
-        arrows: true,
-        position: 888,
-        lux: true,
-        price: "9 990",
-        rating: 5,
-        comments: 145
-      })
+  body.cards
+    header.cards__header
+      .cards__logo
+        +kit-logo()
+    main.cards__main
+      .cards__column-left
+        .cards__apartments.cards__block
+          +apartments-card()
+        .cards__register.cards__block
+          +register-card()
 
-      +images-card({
-        image: "room-2.jpg",
-        arrows: false,
-        position: 840,
-        lux: false,
-        price: "9 990",
-        rating: 4,
-        comments: 65
-      })
+      .cards__column-center
+        .cards__booking.cards__block
+          +booking-card()
+        .cards__authorization.cards__block
+          +authorization-card()
+        
+      .cards__column-right
+        .cards__calendar.cards__block
+          +calendar-card()
+        .cards__images.cards__block-img-1
+          +images-card({
+            image: "room-1.jpg",
+            arrows: true,
+            position: 888,
+            lux: true,
+            price: "9 990",
+            rating: 5,
+            comments: 145
+          })
+        .cards__images.cards__block-img-2
+          +images-card({
+            image: "room-2.jpg",
+            arrows: false,
+            position: 840,
+            lux: false,
+            price: "9 990",
+            rating: 4,
+            comments: 65
+          })

@@ -3,6 +3,6 @@ mixin range-dates({titleIn, titleOut, data})
   .range-dates
     .range-dates__content
       label.range-dates__title= titleIn
-        input.datepicker-here.range-dates__input#range-dates__start-date(type="text", placeholder="ДД.ММ.ГГГГ", data-range="true", data-multiple-dates-separator=" - ",  data-clear-Button="true" , data-apply-Button="true")
+        input.datepicker-here.range-dates__input.range-dates__start-date#range-dates__start-date(type="text", placeholder="ДД.ММ.ГГГГ", data-range="true", data-multiple-dates-separator=" - ",  data-clear-Button="true" , data-apply-Button="true")
       label.range-dates__title= titleOut
         input.range-dates__input#range-dates__end-date(type="text", placeholder="19.08.2019")

@@ -4,7 +4,7 @@
 
   &__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   
   &__title {
@@ -17,18 +17,22 @@
     text-align: left;
   }
 
+  &__start-date {
+    margin-right: 20px;
+  }
+
   &__input {
-    width: 140px;
+    width: 150px;
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
     margin-top: 5px;
     padding: 12px 15px;
     font-size: 14px;
-    background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 93% 49%;
+    background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 91% 55%;
 
     &::placeholder {
       color: $dark-shade-25;
-      letter-spacing: 0.9;
+      letter-spacing: 0.6;
     }
   
     &:hover,
@@ -40,8 +44,8 @@
 
       &::placeholder {
         color: $dark-shade-75;
+        letter-spacing: 0.6;
       }
     }
   }
-  
 }

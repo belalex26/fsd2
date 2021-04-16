@@ -1,0 +1,34 @@
+@import "../../scss/colors.scss";
+
+.images-card {
+    width: 270px;
+    background-color: $white;
+
+    &__body {
+        padding: 17px 17px 8px 20px;
+    }
+
+    &__apartment-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3px;
+        margin-bottom: 10px;
+    }
+
+    &__rating {
+        border-top: 1px solid $dark-shade-10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__comments {
+        font-size: 14px;
+        color: $dark-shade-50;
+        display: flex;
+    }
+    
+    &__text-accented {
+        font-weight: 700;
+    }
+}

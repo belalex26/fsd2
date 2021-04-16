@@ -1,32 +1,38 @@
 @import '../../scss/colors.scss';
 
 .invoice {
-  line-height: 24px;
+  line-height: 23px;
+  color: $dark-shade-75;
 
   &__row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 263px 57px;
+    align-content: center;
     margin-bottom: 10px;
+    font-size: 13.5px;
+    line-height: 18px;
 
-    &_font_large {
-      font-family: Quicksand, OpenSans, sans-serif;
+    &-font-large {
       font-weight: bold;
       color: $dark-shade-100;
-      margin-top: 14px;
+      margin-top: -5px;
       margin-bottom: 0;
     }
+  }
+
+  &__service {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  &__sum {
+    justify-self: end;
   }
 
   &__line {
     position: relative;
     bottom: 20px;
     border-bottom: 1px dashed $dark-shade-25;
-    width: 60%;
-  }
-
-  &__block {
-    display: table-cell;
-    font-size: 16px;
   }
 
   &__service {
@@ -35,12 +41,11 @@
     width: 80%;
     line-height: 24px;
 
-    &_with-icon::after {
+    &-with-icon::after {
       position: absolute;
       content: 'i';
       top: 0;
-      right: 0;
-      font-family: Montserrat, OpenSans, sans-serif;
+      right: -6px;
       font-weight: bold;
       color: $dark-shade-25;
       border: 1px solid $dark-shade-25;
@@ -50,5 +55,12 @@
       line-height: 24px;
       text-align: center;
     }
+  }
+
+  &__row-total {
+    display: grid;
+    grid-template-columns: 60px 182px 77px;
+    column-gap: 5px;
+    font-size: 19px;
   }
 }

@@ -1,0 +1,21 @@
+.booking-card {
+    padding: 38px 30px 15px 30px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 21px;
+    }
+
+    &__guests-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-top: 18px;
+        margin-bottom: 2px;
+    }
+
+    &__invoice {
+        margin-top: 18px;
+    }
+}

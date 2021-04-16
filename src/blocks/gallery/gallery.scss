@@ -6,19 +6,11 @@
     }
   
     &__arrow {
-      position: absolute;
-      top: 0;
-      width: 44px;
-      height: 97%;
-      font-size: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      color: $white;
+      position: relative;
       cursor: pointer;
       background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
     }
+    
   
     &__left-arrow {
       left: 0;
@@ -26,7 +18,6 @@
   
     &__right-arrow {
       right: 0;
-      transform: matrix(-1, 0, 0, 1, 0, 0);
     }
   
     &__point-container {
@@ -35,7 +26,8 @@
       justify-content: space-between;
       position: absolute;
       right: 15px;
-      bottom: 20px;
+      bottom: 17px;
+      cursor: pointer;
     }
   
     &__point {
@@ -48,4 +40,33 @@
         background-color: $white;
       }
     }
+  }
+
+  .gallery__left-arrow::after {
+    position: absolute;
+    content: 'expand_more';
+    display: block;
+    color: $white;
+    font-size: 24px;
+    font-family: "material-icons";
+    width: 44px;
+    height: 44px;
+    top: -90px;
+    left: -10px;
+    transform: rotate(90deg);
+    
+  }
+
+  .gallery__right-arrow::after {
+      position: absolute;
+      content: 'expand_more';
+      display: block;
+      color: $white;
+      font-size: 24px;
+      font-family: "material-icons";
+      width: 44px;
+      height: 44px;
+      top: -109px;
+      right: -11px;
+      transform: rotate(-90deg);
   }
