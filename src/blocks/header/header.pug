@@ -1,10 +1,17 @@
 include ../site-logo/site-logo
 include ../menu/menu
+include ../button/button
 
-mixin header(data)
+
+mixin header({data, isLogged, username})
   header.header
-    .header__container
+    .header__logo
       +site-logo()
+    .header__menu
       +menu(data)
-      
-  
+      if isLogged
+        .header__account= username
+      else
+        .header__enter-panel
+          +button('border', 'войти', '#')
+          +button('fill', 'зарегистрироваться', '#')

@@ -1,12 +1,82 @@
 @import '../../scss/colors.scss';
 
 .menu {
+
     &__list {
         list-style: none;
         display: flex;
-        justify-content: space-between;
         padding: 0;
         margin: 0 auto;
         align-items: center;
     }
+
+    &__link {
+        text-decoration: none;
+        color: $dark-shade-50;
+        font-size: 14px;
+
+        &:hover {
+            color: $dark-shade-75;
+            font-weight: 700;
+        }
+
+        &:focus {
+            color: $dark-shade-75;
+            font-weight: 700;
+        }
+
+        &:active {
+            color: $dark-shade-75;
+            font-weight: 700;
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__sublevel-icon {
+        display: block;
+        position: relative;
+        margin-right: 25px;
+
+        &::after {
+            position: absolute;
+            content: 'expand_more';
+            display: block;
+            color: $dark-shade-50;
+            font-size: 24px;
+            font-family: "material-icons";
+            width: 44px;
+            height: 44px;
+            top: -12px;
+            right: -44px;
+        }
+    }
+
+    &__sublevel-content {
+        position: absolute;
+        top: 36px;
+        min-width: 190px;
+        background-color: $white;
+        display: none;
+    }
+}
+
+.menu__item:hover>.menu__sublevel-content {
+    display: block;
+    z-index: 8;
+}
+
+.menu__item:focus>.menu__sublevel-content {
+    display: block;
+    z-index: 8;
+}
+
+.menu__item:active>.menu__sublevel-content {
+    display: block;
+    z-index: 8;
 }

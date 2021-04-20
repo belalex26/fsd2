@@ -20,10 +20,13 @@ head
         +kit-logo()
 
     main.headers-footers__main
-      .headers-footers__item
-        +header(data)
+      .headers-footers__auth
+        +header({data})
+
+      .headers-footers__no-auth
+        +header({data, isLogged: true, username: "Юлий Цезарь"})
     
-      .headers-footers__item
+      .headers-footers__big
        +footer({
         main: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
         navigation: [
@@ -61,5 +64,5 @@ head
         copy: "Copyright © 2018 Toxin отель. Все права защищены.",
       })
         
-      .headers-footers__item
+      .headers-footers__small
         +light-footer({text: "Copyright © 2018 Toxin отель. Все права защищены."})

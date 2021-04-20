@@ -1,4 +1,31 @@
+@import '../../scss/colors.scss';
+
 .submenu__list {
     list-style: none;
     padding-left: 0;
+}
+
+.submenu__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-shade-50;
+    display: block;
+    padding: 5px 10px;
+
+    &:hover {
+        color: $dark-shade-75;
+        font-weight: 700;
+    }
+
+    &:focus {
+        color: $dark-shade-75;
+        font-weight: 700;
+        outline: none;
+    }
+
+    &:active {
+        color: $dark-shade-75;
+        font-weight: 700;
+        outline: none;
+    }
 }

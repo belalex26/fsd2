@@ -2,4 +2,21 @@
 
 .headers-footers {
     background-color: $ui-kit-bg;
+
+    &__logo {
+        padding: 22px;
+        margin-bottom: 40px;
+    }
+
+    &__auth {
+        margin-bottom: 40px;
+    }
+
+    &__no-auth {
+        margin-bottom: 40px;
+    }
+    
+    &__big {
+        margin-bottom: 40px;
+    }
 }

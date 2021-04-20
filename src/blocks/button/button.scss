@@ -40,6 +40,7 @@
     background-color: $white;
     border: 1px solid;
     border-color: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
+    padding: 9px 20px;
 
     &:hover,
     &:active {
@@ -58,6 +59,7 @@
 
 .button--fill {
     background: linear-gradient(180deg, $purple 0%, $purpleForGradient 100%);
+    padding: 9px 20px;
 
     &:hover,
     &:active {

@@ -8,4 +8,6 @@ mixin menu(data)
         li.menu__item
           a.menu__link= item.title
           if item.sublevel
-            +submenu(item)
+            span.menu__sublevel-icon
+            .menu__sublevel-content
+              +submenu(item)
