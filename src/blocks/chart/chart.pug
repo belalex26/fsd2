@@ -1,0 +1,23 @@
+mixin chart({number, label, option})
+    figure.chart
+        .chart__content
+            svg(width="120" height="121" viewBox="0 0 42 42" class="donut")
+                circle.donut-hole(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                circle.donut-ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3")
+
+                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25" aria-labelledby="donut-segment-1-title donut-segment-1-desc")  
+                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e" stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85")
+                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc" stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65")
+                
+                g.chart__content-wrapper
+                    text.chart-number(x="50%" y="50%")= number
+                    text.chart-label(x="50%" y="50%")= label
+            figcaption.chart__desc
+                p.chart__desc-title= title
+                ul.chart__desc-list(aria-hidden="true" role="presentation")
+                    each item in option
+                        li.chart-desc__item
+                            span(class=`chart-desc__marker chart-desc__marker--${style}`)
+                            p.chart-desc__text= text
+                
+
