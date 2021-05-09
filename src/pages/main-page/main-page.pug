@@ -1,0 +1,15 @@
+extends ../pages-layout/pages-layout
+include ../../blocks/apartments-card/apartments-card
+
+
+block title
+    title Toxin main page
+
+block content
+    main.main-page
+        .main-page__content
+            +apartments-card()
+        p.main-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+        
+
+

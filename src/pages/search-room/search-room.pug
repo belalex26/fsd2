@@ -1,0 +1,300 @@
+extends ../pages-layout/pages-layout
+include ../../blocks/range-slider/range-slider
+include ../../blocks/filter-date/filter-date
+include ../../blocks/rich-checkbox-buttons/rich-checkbox-buttons
+include ../../blocks/dropdown-guests/dropdown-guests
+include ../../blocks/dropdown-room/dropdown-room
+include ../../blocks/checkbox-button/checkbox-button
+include ../../blocks/expandable-checkbox/expandable-checkbox
+
+include ../../blocks/images-card/images-card
+include ../../blocks/pagination/pagination
+
+
+block title
+    title Search room
+
+block content
+    main.search-room__wrapper
+        sidebar.search-room__filters
+            form.search-room__form(action="/mock-address" method="post")
+                .search-room__dropdown-date
+                    .search-room__head
+                        .search-room__title Даты пребывания в отеле
+                    +filter-date()
+
+                .search-room__dropdown-guest
+                    .search-room___head
+                        .search-room__title Гости
+                    +dropdown-guests({
+                        placeholder: "Сколько гостей",
+                        option: [
+                            {
+                                name: 'взрослые',
+                                value: 2, 
+                            },
+                            {
+                                name: 'дети',
+                                value: 2,
+                            },
+                            {
+                                name: 'младенцы',
+                                value: 0, 
+                            }
+                        ]
+                    })
+
+                .search-room__range-slider
+                    +slider({
+                        title: "Диапазон цены",
+                        range: "5 000₽ - 10 000₽"  
+                    })
+                    p.search-room__range-slider-text Стоимость за сутки пребывания в номере
+                
+                .search-room__checkbox-button
+                    .search-room__head
+                        .search-room__title Правила дома
+                    +checkbox-button([
+                        {
+                            name: 'optionally',
+                            value: 'smoke', 
+                            content: 'Можно курить'
+                        },
+                        {
+                            name: 'optionally',
+                            value: 'pets', 
+                            checked: 'true',
+                            content: 'Можно с питомцами'
+                        },
+                        {
+                            name: 'optionally',
+                            value: 'guests', 
+                            checked: 'true',
+                            content: 'Можно пригласить гостей (до 10 человек)'
+                        }
+                        
+                    ])
+                
+                .search-room__rich-checkbox
+                    .form-elements__head
+                        .form-elements__title Доступность
+                    +rich-checkbox([
+                        {
+                            name: 'opt',
+                            header: 'Широкий коридор', 
+                            content: 'Ширина коридоров в номере не менее 91 см.'
+                        },
+                        {
+                            name: 'opt',
+                            header: 'Помощник для инвалидов' , 
+                            content: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+                        },
+                    ])
+
+                .search-room__dropdown-room
+                    .form-elements__head
+                        .form-elements__title Удобства номера
+                    +dropdown-room({
+                        placeholder: "2 спальни, 2 кровати",
+                        value: "2 спальни, 2 кровати",
+                        option:
+                        [
+                            {
+                                name: 'спальни',
+                                value: '2', 
+                            },
+                            {
+                                name: 'кровати',
+                                value: 2,
+                            },
+                            {
+                                name: 'ванные комнаты',
+                                value: 0, 
+                            } 
+                        ]     
+                    })
+
+                .search-room__expandable-checkbox
+                    +expandable-checkbox({
+                        title: 'Дополнительные удобства',
+                        option: [
+                            {
+                                name: 'rules',
+                                value: 'breakfast', 
+                                content: 'Завтрак'
+                            },
+                            {
+                                name: 'rules',
+                                value: 'desk', 
+                                checked: 'true',
+                                content: 'Письменный стол'
+                            },
+                            {
+                                name: 'rules',
+                                value: 'feeding chair', 
+                                checked: 'true',
+                                content: 'Стул для кормления'
+                            },
+                            {
+                                name: 'rules',
+                                value: 'bed', 
+                                checked: 'true',
+                                content: 'Кроватка'
+                            },
+                            {
+                                name: 'rules',
+                                value: 'TV', 
+                                content: 'Телевизор'
+                            },
+                            {
+                                name: 'rules',
+                                value: 'shampoo', 
+                                content: 'Шампунь'
+                            },
+                            
+                        ]     
+                    })
+            
+        section.search-room__content
+            h1.search-room__page-title Номера, которые мы для вас подобрали
+            ul.search-room__list
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-1.jpg",
+                            arrows: true,
+                            position: 888,
+                            lux: true,
+                            price: "9 990",
+                            rating: 5,
+                            comments: 145
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-2.jpg",
+                            position: 840,
+                            price: "9 990",
+                            rating: 4,
+                            comments: 65
+                        })
+                
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-3.jpg",
+                            position: 980,
+                            lux: true,
+                            price: "8 500",
+                            rating: 3,
+                            comments: 35
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-4.jpg",
+                            position: 856,
+                            price: "7 300",
+                            rating: 5,
+                            comments: 19
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-5.jpg",
+                            position: 740,
+                            price: "6 000",
+                            rating: 4,
+                            comments: 44
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-6.jpg",
+                            position: 982,
+                            price: "5 800",
+                            rating: 3,
+                            comments: 56
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-7.jpg",
+                            position: 678,
+                            price: "5 500",
+                            rating: 5,
+                            comments: 45
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-8.jpg",
+                            position: 450,
+                            price: "5 300",
+                            rating: 4,
+                            comments: 39
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-9.jpg",
+                            position: 350,
+                            price: "5 000",
+                            rating: 3,
+                            comments: 77
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-10.jpg",
+                            position: 666,
+                            price: "5 000",
+                            rating: 5,
+                            comments: 25
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-11.jpg",
+                            position: 444,
+                            price: "5 000",
+                            rating: 3,
+                            comments: 15
+                        })
+
+                li.search-room__item
+                    a.search-room__item-link(href="#")
+                        +images-card({
+                            image: "room-12.jpg",
+                            position: 352,
+                            price: "5 000",
+                            rating: 3,
+                            comments: 55
+                        })
+
+            .search-room__pagination
+                +pagination({ 
+                    text: "1 &ndash; 12 из 100+ вариантов аренды",
+                    items: [
+                        { link: "/mock-address", text: "1", active: true },
+                        { link: "/mock-address", text: "2" },
+                        { link: "/mock-address", text: "3" },
+                        { text: "..." },
+                        { link: "/mock-address", text: "15" },
+                    ]
+                })
+
+
+
+            
+
+        

@@ -3,7 +3,10 @@
 .range-dates {
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 6%;
+    width: 100%;
     justify-content: center;
   }
   
@@ -22,13 +25,13 @@
   }
 
   &__input {
-    width: 150px;
+    width: 100%;
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
     margin-top: 5px;
-    padding: 12px 15px;
+    padding: 12px 5px 12px 12px;
     font-size: 14px;
-    background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 91% 55%;
+    background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 88% 55%;
 
     &::placeholder {
       color: $dark-shade-25;

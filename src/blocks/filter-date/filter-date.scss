@@ -1,16 +1,14 @@
 @import "../../scss/colors.scss";
 
 .filter-date__input {
-  width: 266px;
+  width: 87%;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   margin-top: 5px;
   padding: 12px 15px;
   font-size: 14px;
-  background-image: url('./../../blocks/filter-date/images/expand_more.svg');
-  background-repeat: no-repeat;
+  background: url('./../../blocks/filter-date/images/expand_more.svg') no-repeat 94% 49%;
   background-size: 12px 12px;
-  background-position: 95% 49%;
     
   &::placeholder {
     color: $dark-shade-25;

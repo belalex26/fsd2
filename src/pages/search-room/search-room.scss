@@ -1,0 +1,87 @@
+@import '../../scss/colors.scss';
+
+.search-room {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 270px auto;
+        grid-column-gap: 14px;
+        width: 1200px;
+        margin: 0 auto;
+        padding-left: 58px;
+        padding-bottom: 76px;
+        box-sizing: border-box;
+    }
+
+    &__content {
+        padding-left: 41px;
+        margin-top: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__list {
+        padding: 0;
+        margin-top: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 12px;
+        grid-row-gap: 15px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+        color: $dark-shade-100;
+    }
+
+    &__item-link {
+        text-decoration: none;
+        color: $dark-shade-50;
+    }
+
+    &__dropdown-date {
+        margin-top: 27px;
+        margin-bottom: 20px;
+    }
+
+    &__dropdown-guest {
+        width: 87%;
+        margin-bottom: 30px;
+    }
+
+    &__range-slider-text {
+        line-height: 14px;
+        font-size: 12px;
+        color: $dark-shade-50;
+        margin-top: 14px;
+        margin-bottom: 29px;
+    }
+
+    &__checkbox-button {
+        margin-bottom: 31px;
+    }
+
+    &__rich-checkbox {
+        width: 119%;
+    }
+
+    &__dropdown-room {
+        width: 87%;
+        margin-top: -3px;
+    }
+
+    &__page-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29.3px;
+        align-self: flex-start;
+    }
+
+    &__pagination {
+        margin-top: 20px;
+        margin-left: -14px;
+    }
+}
