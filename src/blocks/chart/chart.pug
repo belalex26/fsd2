@@ -1,23 +1,34 @@
 mixin chart({number, label, option})
-    figure.chart
-        .chart__content
-            svg(width="120" height="121" viewBox="0 0 42 42" class="donut")
-                circle.donut-hole(cx="21" cy="21" r="15.91549430918954" fill="#fff")
-                circle.donut-ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3")
+    .chart
+        figure.chart__table
+            .chart__content
+                svg(width="145" height="156" viewBox="0 0 42 42" class="donut")
+                    linearGradient(id="linear-gradient-first")
+                        stop(offset="70%" stop-color="#8BA4F9")
+                        stop(offset="30%" stop-color="#BC9CFF")
 
-                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="40 60" stroke-dashoffset="25" aria-labelledby="donut-segment-1-title donut-segment-1-desc")  
-                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#b1c94e" stroke-width="3" stroke-dasharray="20 80" stroke-dashoffset="85")
-                circle.donut-segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#377bbc" stroke-width="3" stroke-dasharray="30 70" stroke-dashoffset="65")
-                
-                g.chart__content-wrapper
-                    text.chart-number(x="50%" y="50%")= number
-                    text.chart-label(x="50%" y="50%")= label
-            figcaption.chart__desc
-                p.chart__desc-title= title
-                ul.chart__desc-list(aria-hidden="true" role="presentation")
-                    each item in option
-                        li.chart-desc__item
-                            span(class=`chart-desc__marker chart-desc__marker--${style}`)
-                            p.chart-desc__text= text
-                
+                    linearGradient(id="linear-gradient-second")
+                        stop(offset="30%" stop-color="#66D2EA")
+                        stop(offset="70%" stop-color="#6FCF97")
+                    
+                    linearGradient(id="linear-gradient-three")
+                        stop(offset="70%" stop-color="#FFBA9C")
+                        stop(offset="30%" stop-color="#FFE39C")
 
+                    circle.chart__hole(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                    circle.chart__ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#fff" stroke-width="1.5")
+
+                    circle.chart__segment(cx="21" cy="21" r="16.91549430918954" fill="transparent" stroke="url(#linear-gradient-first)" stroke-width="1.5" stroke-dasharray="25 60" stroke-dashoffset="5")  
+                    circle.chart__segment(cx="21" cy="21" r="16.91549430918954" fill="transparent" stroke="url(#linear-gradient-second)" stroke-width="1.5" stroke-dasharray="131 109" stroke-dashoffset="105")
+                    circle.chart__segment(cx="21" cy="21" r="16.91549430918954" fill="transparent" stroke="url(#linear-gradient-three)" stroke-width="1.5" stroke-dasharray="52 51" stroke-dashoffset="76")
+                    
+                    g.chart__content-wrapper
+                        text.chart-number(x="50%" y="35%")= number
+                        text.chart-label(x="35%" y="46%")= label
+        .chart__desc
+            ul.chart__desc-list
+                each item in option
+                    li.chart-desc__item
+                        span(class=`chart-desc__marker chart-desc__marker--${style}`)
+                        p.chart-desc__text= item.text
+                

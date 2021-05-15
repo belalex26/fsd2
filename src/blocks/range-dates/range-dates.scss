@@ -1,14 +1,11 @@
 @import '../../scss/colors.scss';
 
 .range-dates {
-
-  &__content {
     display: grid;
     grid-template-columns: 47% 47%;
     gap: 6%;
     width: 100%;
     justify-content: center;
-  }
   
   &__title {
     font-family: "montserrat", "OpenSans", sans-serif;
@@ -25,7 +22,7 @@
   }
 
   &__input {
-    width: 100%;
+    width: 86%;
     border: 1px solid $dark-shade-25;
     border-radius: 4px;
     margin-top: 5px;

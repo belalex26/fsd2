@@ -1,0 +1,18 @@
+.sing-in {
+    background: url("../../pages/sing-in/images/reg-bg.jpg") no-repeat center;
+    background-size: cover;
+
+    &__container {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        padding-top: 167px;
+        padding-left: 120px;
+        padding-bottom: 176px;
+    
+    }
+}
+
+.sing-in__container > .authorization-card {
+    width: 319px;
+}

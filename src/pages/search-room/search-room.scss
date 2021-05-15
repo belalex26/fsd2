@@ -7,13 +7,13 @@
         grid-column-gap: 14px;
         width: 1200px;
         margin: 0 auto;
-        padding-left: 58px;
+        padding-left: 20px;
         padding-bottom: 76px;
         box-sizing: border-box;
     }
 
     &__content {
-        padding-left: 41px;
+        padding-left: 22px;
         margin-top: 7px;
         display: flex;
         flex-direction: column;
@@ -48,7 +48,7 @@
     }
 
     &__dropdown-guest {
-        width: 87%;
+        width: 97%;
         margin-bottom: 30px;
     }
 
@@ -78,6 +78,7 @@
         font-weight: 700;
         line-height: 29.3px;
         align-self: flex-start;
+        padding-left: 19px;
     }
 
     &__pagination {

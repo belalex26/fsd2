@@ -9,7 +9,7 @@
     }
 
     &__input {
-        width: 100%;
+        width: 90%;
         position: relative;
         border: 1px solid $dark-shade-50;
         border-top-left-radius: 4px;
@@ -52,8 +52,8 @@
     }
 
     &__content {
-        width: 318px;
         position: absolute;
+        width: 101.5%;
         background-color: $white;
         border: 1px solid $dark-shade-50;
         border-bottom-left-radius: 4px;
