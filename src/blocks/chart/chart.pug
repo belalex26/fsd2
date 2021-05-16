@@ -23,12 +23,11 @@ mixin chart({number, label, option})
                     circle.chart__segment(cx="21" cy="21" r="16.91549430918954" fill="transparent" stroke="url(#linear-gradient-three)" stroke-width="1.5" stroke-dasharray="52 51" stroke-dashoffset="76")
                     
                     g.chart__content-wrapper
-                        text.chart-number(x="50%" y="35%")= number
-                        text.chart-label(x="35%" y="46%")= label
+                        text.chart__number(x="34%" y="50%")= number
+                        text.chart__label(x="30%" y="62%")= label
         .chart__desc
             ul.chart__desc-list
                 each item in option
                     li.chart-desc__item
-                        span(class=`chart-desc__marker chart-desc__marker--${style}`)
-                        p.chart-desc__text= item.text
+                        p(class=`chart__desc-text chart__desc-text--${item.color}`)= item.text
                 
