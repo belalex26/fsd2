@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables.scss';
 
 .cards {
     background-color: $ui-kit-bg;
@@ -22,6 +23,18 @@
         gap: 40px;
         grid-template-columns: 380px 380px 320px;
 
+        @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+            display: block;
+            margin-top: 67px;
+            padding-left: 0;
+        }
+
+        @media (min-width: $tablet-width)and (max-width: $tablet-width-only) {
+            display: grid;
+            grid-template-columns: 380px 380px;
+            grid-column-gap: 10%;
+        }
+
     }
       
     &__block {
@@ -35,20 +48,55 @@
     &__column-left {
         grid-column-start: 1;
         grid-column-end: 2;
+
+        @media (max-width: $tablet-width) {
+            width: 380px;
+            margin: 0 auto;
+
+        }
     }
 
     &__column-center {
         grid-column-start: 2;
         grid-column-end: 3;
+
+        @media (max-width: $tablet-width) {
+            width: 380px;
+            margin: 0 auto;
+
+        }
     }
     &__column-right {
         grid-column-start: 3;
         grid-column-end: 4;
+
+        @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+            width: 320px;
+            margin: 0 auto;
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+        }
     }
 
     &__block-img-1 {
         margin-bottom: 38px;
         margin-top: -2px;
+
+        @media (max-width: $tablet-width) {
+            width: 270px;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__block-img-2 {
+
+        @media (max-width: $tablet-width) {
+            width: 270px;
+            margin: 0 auto;
+
+        }
     }
     
 }
