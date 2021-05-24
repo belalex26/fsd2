@@ -1,3 +1,5 @@
+@import '../../scss/variables.scss';
+
 .color-types {
     &__container {
         max-width: 1379px;
@@ -10,9 +12,13 @@
 
     &__content {
         display: grid;
-        grid-template-columns: 425px 370px;
+        grid-template-columns: 30% 33%;
         grid-template-rows: auto;
-        grid-column-gap: 458px;
+        grid-column-gap: 34%;
+
+        @media (max-width: $tablet-width) {
+            display: block;
+        }
     }
 
     &__colors {
@@ -20,6 +26,13 @@
         padding-left: 230px;
         grid-column-start: 1;
         grid-column-end: 2;
+
+        @media (max-width: $mobile-width) {
+            margin: 0 auto;
+            padding-left: 0;
+            margin-top: 59px;
+            width: 20%;
+        }
     }
 
     &__types {
@@ -27,5 +40,20 @@
         grid-column-start: 2;
         grid-column-end: 3;
         grid-row-start: 1;
+
+        
+        @media (max-width: $tablet-width) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            width: 69%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: $mobile-width) {
+            width: 71%;
+        }
     }
 }

@@ -1,4 +1,5 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables.scss';
 
 .types {
     list-style: none;
@@ -24,6 +25,15 @@
             width: 37px;
             display: grid;
             justify-content: end;
+
+            
+            @media (max-width: $tablet-width) {
+                left: 0;
+            }
+
+            @media (max-width: $mobile-width) {
+                left: -6%;
+            }
         }
 
         &--h1 {
@@ -69,6 +79,15 @@
         &--body {
             width: 86%;
             margin-top: 25px;
+        }
+
+        @media (max-width: $tablet-width) {
+            padding-left: 20%;
+        }
+
+        
+        @media (max-width: $mobile-width) {
+            padding-left: 18%;
         }
     }
 
