@@ -4,7 +4,7 @@
     &__wrapper {
         display: grid;
         grid-template-columns: 270px auto;
-        grid-column-gap: 14px;
+        grid-column-gap: 26px;
         width: 1200px;
         margin: 0 auto;
         padding-left: 20px;
@@ -13,7 +13,7 @@
     }
 
     &__content {
-        padding-left: 22px;
+        padding-left: 10px;
         margin-top: 7px;
         display: flex;
         flex-direction: column;
@@ -48,7 +48,6 @@
     }
 
     &__dropdown-guest {
-        width: 97%;
         margin-bottom: 30px;
     }
 
@@ -69,8 +68,7 @@
     }
 
     &__dropdown-room {
-        width: 87%;
-        margin-top: -3px;
+        margin-top: -11px;
     }
 
     &__page-title {
@@ -78,7 +76,7 @@
         font-weight: 700;
         line-height: 29.3px;
         align-self: flex-start;
-        padding-left: 19px;
+        padding-left: 18px;
     }
 
     &__pagination {

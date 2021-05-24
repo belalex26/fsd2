@@ -1,0 +1,75 @@
+@import '../../scss/colors.scss';
+
+.types {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: $dark-shade-75;
+
+    &__item {
+        padding-bottom: 5px;
+    }
+    
+    &__text {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: 'Body';
+            color: $dark-shade-25;
+            font-size: 14px;
+            top: 0;
+            left: -68px;
+            width: 37px;
+            display: grid;
+            justify-content: end;
+        }
+
+        &--h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29.26px;
+            color: $dark-shade-100;
+
+            &::before {
+                content: 'H1';
+                font-size: 24px;
+            }
+        }
+
+        &--h2 {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 29.26px;
+            color: $dark-shade-100;
+
+            &::before {
+                content: 'H2';
+                font-size: 19px;
+                text-align: right;
+            }
+        }
+
+        &--h3 {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 29.26px;
+            color: $dark-shade-100;
+            text-transform: uppercase;
+
+            &::before {
+                content: 'H3';
+                font-size: 12px;
+                text-align: right;
+
+            }
+        }
+
+        &--body {
+            width: 86%;
+            margin-top: 25px;
+        }
+    }
+
+}

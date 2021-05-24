@@ -1,0 +1,70 @@
+@import '../../scss/colors.scss';
+
+.color {
+    list-style: none;
+    padding-left: 0;
+    font-size: 19px;
+    line-height: 28px;
+
+    &__title {
+        position: relative;
+        font-weight: 700;
+        margin-top: 15px;
+        margin-bottom: 0;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 70px;
+            height: 70px;
+            top: -9px;
+            left: -111px;
+            background-color: $dark-shade-100;
+            border-radius: 6px;
+        }
+
+        &--ds-75 {
+            &::before {
+                background-color: $dark-shade-75;
+            }
+        }
+
+        &--ds-50 {
+            &::before {
+                background-color: $dark-shade-50;
+            }
+        }
+
+        &--ds-25 {
+            &::before {
+                background-color: $dark-shade-25;
+            }
+        }
+
+        &--ds-5 {
+            &::before {
+                background-color: $dark-shade-5;
+            }
+        }
+
+        &--purple {
+            &::before {
+                background-color: $purple;
+            }
+        }
+
+        &--green {
+            &::before {
+                background-color: $green;
+            }
+        }
+
+
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 34px;
+    }
+
+}

@@ -1,15 +1,23 @@
+@import '../../scss/colors.scss';
+
 .room-details {
     &__container {
         display: grid;
         max-width: 1163px;
         margin: 0 auto;
-        margin-top: 44px;
-        grid-template-columns: 30% 33% 33%;
+        margin-top: 46px;
+        padding-bottom: 58px;
+        grid-template-columns: 30% 37% 33%;
         grid-template-rows: auto auto auto;
     }
 
+    &__photo {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
     &__title {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     &__detail { 
@@ -27,19 +35,59 @@
     &__chart { 
         grid-column-start: 2;
         grid-column-end: 3;
+
+        &-title {
+            margin-bottom: 7px;
+            padding-left: 14px;
+        }
     }
 
     &__comment {
         grid-column-start: 1;
         grid-column-end: 3;
+        margin-left: -20px;
+        margin-top: 6px;
+    }
+
+    &__comment-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 8px;
+        padding-left: 10px;
+    }
+
+    &__comment-total {
+        font-size: 14px;
+        color: $dark-shade-50;
+        padding-right: 66px;
+    }
+
+    &__comment-content {
+        margin-top: -12px;
     }
 
     &__rules {
         grid-row-start: 3;
     }
 
+    &__rules-title {
+        margin-top: 15px;
+        padding-left: 19px;
+    }
+
     &__cancellation {
         grid-row-start: 3;
+        padding-left: 14px;
+        font-size: 14px;
+        color: $dark-shade-75;
+        width: 81%;
+        line-height: 24px;
+    }
+
+    &__cancellation-title {
+        margin-bottom: 15px;
     }
 
     &__booking-card {
@@ -47,5 +95,6 @@
         grid-column-end: 4;
         grid-row-start: 1;
         grid-row-end: 3;
+        margin-top: 20px;
     }
 }

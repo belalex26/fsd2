@@ -49,34 +49,53 @@ head
             +text-field({style: "focused", type: "email", placeholder: "This is pretty awesome"})
 
           .form-elements__item.form-elements__dropdown
-            .form-elements__head
-              .form-elements__title Dropdown
-            +dropdown-field({placeholder: "Сколько гостей"})
+
+            .form-elements__item.form-elements__dropdown-guests
+              .form-elements__head
+                .form-elements__title Dropdown
+              +dropdown-guests({
+                placeholder: "Сколько гостей",
+                value: "Сколько гостей",
+                option: [
+                  {
+                      name: 'взрослые',
+                      value: 2, 
+                  },
+                  {
+                      name: 'дети',
+                      value: 2,
+                  },
+                  {
+                      name: 'младенцы',
+                      value: 0, 
+                  }
+                ]
+              })  
 
           .form-elements__item
             .form-elements__head
               .form-elements__title Masked text field
             +text-field({type: "data", placeholder: "ДД.ММ.ГГГГ"})
 
-          .form-elements__item
+          .form-elements__item.form-elements__range-dates
             +range-dates({
               titleIn: "date dropdown",
               titleOut: "date dropdown"
             })
 
-          .form-elements__item
+          .form-elements__item.form-elements__filter-date
             .form-elements__head
               .form-elements__title Filter date dropdown
             +filter-date()
           
-          .form-elements__item
+          .form-elements__item.form-elements__subscripton
             .form-elements__head
               .form-elements__title Subscription text field 
             +text-field({style: "subscripton", type: "email", placeholder: "Email"})
 
         .form-elements__container-left-bot
 
-          .form-elements__item
+          .form-elements__item.form-elements__dropdown-room
             .form-elements__head
               .form-elements__title Dropdown
               .form-elements__desc Default
@@ -100,30 +119,6 @@ head
               ]     
             })
 
-          .form-elements__item.form-elements__dropdown-room
-            .form-elements__head
-              .form-elements__title Dropdown
-              .form-elements__desc Expanded
-            +dropdown-room({
-              placeholder: "2 спальни, 2 кровати",
-              value: "2 спальни, 2 кровати",
-              option:
-              [
-                  {
-                      name: 'спальни',
-                      value: '2', 
-                  },
-                  {
-                      name: 'кровати',
-                      value: 2,
-                  },
-                  {
-                      name: 'ванные комнаты',
-                      value: 0, 
-                  } 
-              ]     
-            })
-    
           .form-elements__item
             +expandable-checkbox({
               title: 'expandable checkbox list',
@@ -226,28 +221,6 @@ head
               +rating(5, true)
 
         .form-elements__container-mid-bot
-
-          .form-elements__item.form-elements__dropdown-guest
-            .form-elements__head
-              .form-elements__title Dropdown
-            .form-elements__dropdown-guest-content
-              +dropdown-guests({
-                placeholder: "Сколько гостей",
-                option: [
-                  {
-                      name: 'взрослые',
-                      value: 2, 
-                  },
-                  {
-                      name: 'дети',
-                      value: 2,
-                  },
-                  {
-                      name: 'младенцы',
-                      value: 0, 
-                  }
-                ]
-              })
           
           .form-elements__item
             .form-elements__head
@@ -305,27 +278,6 @@ head
             })
 
         .form-elements__container-right-bot
-          .form-elements__item
-              .form-elements__head
-                .form-elements__title Dropdown
-              +dropdown-guests({
-                placeholder: "Сколько гостей",
-                value: "3 гостя",
-                option: [
-                  {
-                      name: 'взрослые',
-                      value: 2, 
-                  },
-                  {
-                      name: 'дети',
-                      value: 2,
-                  },
-                  {
-                      name: 'младенцы',
-                      value: 0, 
-                  }
-                ]
-              })  
 
           .form-elements__item
             .form-elements__head

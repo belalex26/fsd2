@@ -11,7 +11,7 @@ mixin register-card()
       .register-card__name
         .register-card__first-name
           +text-field({type: "text", placeholder: "Имя"})
-        .register-card__surname
+        .register-card__subname
           +text-field({type: "text", placeholder: "Фамилия"})
         .register-card__radio
             +radio-button('gender', 'man', 'Мужчина', true)

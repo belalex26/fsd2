@@ -6,7 +6,7 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 263px 57px;
+    grid-template-columns: 239px 81px;
     align-content: center;
     margin-bottom: 10px;
     font-size: 13.5px;
@@ -27,6 +27,7 @@
 
   &__sum {
     justify-self: end;
+    font-size: 13.5px;
   }
 
   &__line {
@@ -38,7 +39,7 @@
   &__service {
     position: relative;
     padding-right: 24px;
-    width: 80%;
+    width: 82%;
     line-height: 24px;
 
     &-with-icon::after {
@@ -59,7 +60,7 @@
 
   &__row-total {
     display: grid;
-    grid-template-columns: 60px 182px 77px;
+    grid-template-columns: 60px 158px 93px;
     column-gap: 5px;
     font-size: 19px;
   }

@@ -2,7 +2,6 @@
 
 .apartments-card {
     padding: 19px 30px 15px 30px;
-    width: 100%;
     background-color: $white;
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
@@ -10,6 +9,14 @@
 
     &__body {
         width: 100%;
+    }
+
+    &__range-data {
+        width: 101%;
+    }
+
+    &__guests {
+        width: 101%;
     }
 
     &__guests-title {

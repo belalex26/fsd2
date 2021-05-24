@@ -12,12 +12,12 @@ mixin footer({main, navigation, copy, subscription: {title, text}})
 
       .footer__center
         .footer__nav-container
-          each link_block in navigation
+          each footer__block in navigation
             .footer__nav
               .footer__block-header
-                h3.footer__subtitle= link_block.title
+                h3.footer__subtitle= footer__block.title
               p.footer__paragraph
-                each link in link_block.links
+                each link in footer__block.links
                   a.footer__link(href=link.url)= link.text
         
       .footer__right-side

@@ -1,0 +1,6 @@
+mixin color ({option})
+    ul.color
+        each item in option
+            li.color-desc__item
+                p(class=`color__title color__title--${item.color}`)=item.title
+                p.color__text= item.text

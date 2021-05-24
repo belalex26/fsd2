@@ -1,0 +1,5 @@
+mixin types ({option})
+    ul.types
+        each item in option
+            li.types__item
+                p(class=`types__text types__text--${item.size}`)=item.text

@@ -57,9 +57,11 @@ block content
                     ]
                 })
             .room-details__comment
-                .room-details__comment-wrapper
-                    h3.room-details__comment-title.room-details__title Сведения о номере
+                .room-details__comment-title
+                    h3.room-details__comment-title.room-details__title Отзывы посетителей номера
                     p.room-details__comment-total 2 отзыва
+    
+                .room-details__comment-content
                     +comment({
                         image: "man.png",
                         author: "Мурад Сарафанов",
@@ -72,7 +74,7 @@ block content
                     })
 
                     +comment({
-                        image: "man.png",
+                        image: "woman.png",
                         author: "Патрисия Стёклышкова",
                         date: "Неделю назад",
                         text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент",
@@ -80,6 +82,7 @@ block content
                             likes: 2
                         }
                     })
+
             .room-details__rules
                 h3.room-details__rules-title.room-details__title Правила
                 +bullet-list([

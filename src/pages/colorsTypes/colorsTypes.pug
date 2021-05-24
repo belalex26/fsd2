@@ -1,12 +1,83 @@
-doctype html
 head
   meta(charset='UTF-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-  link(href='./assets/fonts/montserrat-regular.woff' as='font')
-  link(rel='stylesheet', href='css/main.css')
-  title ColorsType FSD2
+  link(href='../fonts/montserrat-regular.woff' as='font')
+  link(href='../fonts/material-icons-regular.woff' as='font')
+  link(rel='stylesheet', href='../css/main.css')
+  title Colors Types FSD2
 
-body.body
-  h1 Привет
+  include ../../blocks/kit-logo/kit-logo
+  include ../../blocks/color/color
+  include ../../blocks/types/types
 
-  
+body.color-types
+    header.color-types__header
+      .color-types__container
+        .color-types__logo
+          +kit-logo()
+
+    main.color-types__main
+      .color-types__container
+        .color-types__content
+          .color-types__colors
+            +color({
+              option:[
+                {
+                  color: 'ds-100',
+                  title: 'Dark Shade 100%',
+                  text: '#1F2041'
+
+                },
+                {
+                  color: 'ds-75',
+                  title: 'Dark Shade 75%',
+                  text: '#1F2041'
+                },
+                                {
+                  color: 'ds-50',
+                  title: 'Dark Shade 50%',
+                  text: '#1F2041'
+                },
+                                {
+                  color: 'ds-25',
+                  title: 'Dark Shade 25%',
+                  text: '#1F2041'
+                },
+                                {
+                  color: 'ds-5',
+                  title: 'Dark Shade 5%',
+                  text: '#1F2041'
+                },
+                                {
+                  color: 'purple',
+                  title: 'Purple',
+                  text: '#BC9CFF'
+                },
+                                {
+                  color: 'green',
+                  title: 'Green',
+                  text: '#6FCF97'
+                },
+              ]     
+            })
+          .color-types__types
+            +types({
+                option:[
+                  {
+                    size: 'h1',
+                    text: 'This one is the sub-section or widget title'
+                  },
+                  {
+                    size: 'h2',
+                    text: 'Next one is the item title inside widgets'
+                  },
+                  {
+                    size: 'h3',
+                    text: 'This is a label or CTA text'
+                  },
+                  {
+                    size: 'body',
+                    text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+                  },
+                ]     
+              })

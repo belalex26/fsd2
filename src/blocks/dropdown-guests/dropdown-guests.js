@@ -5,13 +5,6 @@ const dataGuest = document.querySelectorAll('.dropdown__guests-counter');
 let countGuests = [];
 
 
-document.querySelectorAll('.dropdown-guests__triger').forEach((item) =>
-    item.addEventListener('click', () => {
-        const parent = item.parentNode;
-        parent.classList.toggle('dropdown-guests--active');
-    })
-);
-
 buttons.forEach(btn => {
     btn.addEventListener('click', function() {
         const direction = this.dataset.direction;

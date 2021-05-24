@@ -5,13 +5,19 @@
     background-size: cover;
 
     &__container {
-        max-width: 1200px;
+        max-width: 90%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-        padding-left: 140px;
-        padding-top: 66px;
+        padding-top: 70px;
+    }
+
+    &__apartments-card {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding-left: 68px;
     }
 
     &__text {
@@ -21,14 +27,13 @@
         width: 24%;
         text-align: right;
         align-self: flex-end;
-        margin-top: 330px;
-        padding-right: 33px;
-        padding-bottom: 0;
-
+        margin-top: 319px;
+        padding-right: 61px;
+        margin-bottom: 20px;
     }
 }
 
-.main-page__form > .apartments-card {
+.main-page__apartments-card > .apartments-card {
     width: 319px;
     padding-bottom: 30px;
 }

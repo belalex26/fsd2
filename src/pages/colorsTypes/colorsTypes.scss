@@ -1,0 +1,31 @@
+.color-types {
+    &__container {
+        max-width: 1379px;
+        margin: 0 auto;
+    }
+
+    &__logo {
+        padding-top: 20px;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 425px 370px;
+        grid-template-rows: auto;
+        grid-column-gap: 458px;
+    }
+
+    &__colors {
+        margin-top: 59px;
+        padding-left: 230px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    &__types {
+        padding-top: 44px;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+    }
+}

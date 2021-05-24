@@ -5,9 +5,9 @@ mixin authorization-card()
   .authorization-card
     h2.authorization-card__title Войти
     form.authorization-card__form(action="/mock-address" method="post")
-      .authorization-card__first-name
+      .authorization-card__email
         +text-field({type: "email", placeholder: "Email"})
-      .authorization-card__subname
+      .authorization-card__password
         +text-field({type: "password", placeholder: "Пароль"})
       .authorization-card__btn
         +button('long', 'войти', '#')
