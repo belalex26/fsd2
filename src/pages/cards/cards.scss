@@ -70,7 +70,7 @@
         grid-column-start: 3;
         grid-column-end: 4;
 
-        @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+        @media (min-width: $mobile-width-only) and (max-width: $tablet-width-only) {
             width: 320px;
             margin: 0 auto;
             grid-column-start: 1;
