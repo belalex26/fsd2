@@ -23,7 +23,7 @@
         gap: 40px;
         grid-template-columns: 380px 380px 320px;
 
-        @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
+        @media (min-width: $mobile-width) and (max-width: $tablet-width) {
             display: block;
             margin-top: 67px;
             padding-left: 0;
