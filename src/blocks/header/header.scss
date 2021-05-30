@@ -1,34 +1,220 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables.scss';
 
 .header {
     background-color: $white;
     padding-left: 50px;
-    padding: 15px 137px 11px 139px;
+    padding: 15px 18% 11px 10%;
     display: flex;
     justify-content: space-between;
 
+    &__menu {
+        position: relative;
+    }
+
+    &__menu-burger {
+        display: none;
+
+        @media (max-width: $tablet-width) {
+            display: block;
+            position: relative;
+            width: 35px;
+            height: 3px;
+            background-color: $purple;
+
+            &::before {
+                position: absolute;
+                width: 35px;
+                height: 3px;
+                content: '';
+                background-color: $purple;
+                top: -10px;
+                left: 0;
+            }
+
+            &::after {
+                position: absolute;
+                width: 35px;
+                height: 3px;
+                content: '';
+                background-color: $purple;
+                top: 10px;
+                left: 0;
+            }
+        }
+
+    }
+
+    &__menu-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $tablet-width) {
+            position: absolute;
+            background-color: $white;
+            top: 47px;
+            left: -135px;
+            display: grid;
+            z-index: 100;
+            min-height: 293px;
+            width: 210px;
+        }
+    }
+
+    &__enter-panel-icon,
+    &__account-icon {
+        display: none;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 47px;
+            height: 45px;
+            background: url('./../../blocks/header/images/auth.svg') no-repeat center;
+            left: 0px;
+            top: -4px;
+        }
+
+        @media (max-width: $tablet-width-only) {
+            display: block;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            &:hover,
+            &:active,
+            &:focus {
+                opacity: 0.5;
+            }
+
+        }
+
+        @media (max-width: $tablet-width) {
+            display: none;
+           
+        }
+    }
 
     &__enter-panel {
-        min-width: 303px;
+        position: relative;
+
+        @media (max-width: $tablet-width-only) {
+            width: 45px;
+        }
+
+        @media (max-width: $tablet-width) {
+            position: absolute;
+            top: 144px;
+            left: 86px;
+        }
+
+    }
+
+    &__enter-panel-wrapper {
+        width: 303px;
         display: flex;
         justify-content: space-between;
         margin-left: 9px;
+
+        @media (max-width: $tablet-width-only) {
+            display: none;
+            position: absolute;
+            flex-direction: column;
+            justify-content: space-around;
+            min-height: 100px;
+            width: 200px;
+            top: 42px;
+            left: -91px;
+            background-color: $white;
+        }
+
+        @media (max-width: $tablet-width) {
+            display: flex;
+            position: relative;
+        }
+
     }
 
     &__menu{
         display: flex;
         align-items: center;
+
+        &-burger {
+            display: none;
+
+            @media (max-width: $tablet-width) {
+                display: block;
+                
+            }
+
+        }
+
+        &-wrapper {
+            @media (max-width: $tablet-width) {
+                display: block;
+            }
+        }
+
     }
 
     &__account {
+        position: relative;
+        width: 126px;
+
+        @media (max-width: $tablet-width-only) {
+            width: 49px;
+
+        }
+    }
+
+    /*
+
+    &__account-icon {
+
+        &::before {
+            left: 0px;
+            top: -4px;
+        }
+    }*/
+
+    &__account-name {
+        width: 111%;
         font-size: 14px;
         color: $dark-shade-50;
         border-left: 1px solid $dark-shade-10;
         padding-left: 20px;
         margin-left: 9px;
+
+        @media (max-width: $tablet-width-only) {
+            display: none;
+            font-size: 17px;
+            position: absolute;
+            min-height: 50px;
+            width: 136px;
+            top: 41px;
+            left: -25px;
+            background-color: $white;
+            padding-top: 9px;
+        }
         
     }
+}
 
+.header__enter-panel:hover .header__enter-panel-wrapper,
+.header__enter-panel:focus .header__enter-panel-wrapper,
+.header__enter-panel:active .header__enter-panel-wrapper {
 
+    @media (max-width: $tablet-width-only) {
+        display: flex;  
+    }
+}
 
+.header__account:hover .header__account-name,
+.header__account:focus .header__account-name,
+.header__account:active .header__account-name {
+
+    @media (max-width: $tablet-width-only) {
+        display: block;  
+    }
 }

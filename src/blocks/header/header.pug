@@ -8,10 +8,16 @@ mixin header({data, isLogged, username})
     .header__logo
       +site-logo()
     .header__menu
-      +menu(data)
-      if isLogged
-        .header__account= username
-      else
-        .header__enter-panel
-          +button('border', 'войти', '#')
-          +button('fill', 'зарегистрироваться', '#')
+      a.header__menu-burger
+      .header__menu-wrapper
+        +menu(data)
+        if isLogged
+          .header__account
+            a.header__account-icon(href='#')
+            p.header__account-name= username
+        else
+          .header__enter-panel
+            a.header__enter-panel-icon(href='#')   
+            .header__enter-panel-wrapper
+              +button('border', 'войти', '#')
+              +button('fill', 'зарегистрироваться', '#')

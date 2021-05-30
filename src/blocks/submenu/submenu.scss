@@ -1,8 +1,14 @@
 @import '../../scss/colors.scss';
+@import '../../scss/variables.scss';
 
 .submenu__list {
     list-style: none;
     padding-left: 0;
+
+    @media (max-width: $tablet-width) {
+        width: 130px;
+
+    }
 }
 
 .submenu__link {
