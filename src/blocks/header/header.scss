@@ -4,16 +4,25 @@
 .header {
     background-color: $white;
     padding-left: 50px;
-    padding: 15px 18% 11px 10%;
+    padding: 15px 9.5% 11px 10%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     &__menu {
         position: relative;
+        display: flex;
+        align-items: center;
     }
 
     &__menu-burger {
         display: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: 0.5;
+        }
 
         @media (max-width: $tablet-width) {
             display: block;
@@ -21,6 +30,7 @@
             width: 35px;
             height: 3px;
             background-color: $purple;
+            margin-top: 14px;
 
             &::before {
                 position: absolute;
@@ -55,7 +65,7 @@
             background-color: $white;
             top: 47px;
             left: -135px;
-            display: grid;
+            display: none;
             z-index: 100;
             min-height: 293px;
             width: 210px;
@@ -136,28 +146,6 @@
 
     }
 
-    &__menu{
-        display: flex;
-        align-items: center;
-
-        &-burger {
-            display: none;
-
-            @media (max-width: $tablet-width) {
-                display: block;
-                
-            }
-
-        }
-
-        &-wrapper {
-            @media (max-width: $tablet-width) {
-                display: block;
-            }
-        }
-
-    }
-
     &__account {
         position: relative;
         width: 126px;
@@ -166,17 +154,19 @@
             width: 49px;
 
         }
-    }
 
-    /*
+        @media (max-width: $tablet-width) {
+            position: absolute;
+            display: grid;
+            top: 193px;
+            left: 0;
+            z-index: 120;
+            width: 100%;
+            height: 14px;
+            border-top: 1px solid $dark-shade-10;
 
-    &__account-icon {
-
-        &::before {
-            left: 0px;
-            top: -4px;
         }
-    }*/
+    }
 
     &__account-name {
         width: 111%;
@@ -197,6 +187,15 @@
             background-color: $white;
             padding-top: 9px;
         }
+
+        @media (max-width: $tablet-width) {
+            display: block;
+            top: 0;
+            left: 0;
+            padding-left: 0px;
+            font-size: 15px;
+            border-left: none;
+        }
         
     }
 }
@@ -215,6 +214,15 @@
 .header__account:active .header__account-name {
 
     @media (max-width: $tablet-width-only) {
+        display: block;  
+    }
+}
+
+.header__menu:hover .header__menu-wrapper,
+.header__menut:focus .header__menu-wrapper,
+.header__menu:active .header__menu-wrapper {
+
+    @media (max-width: $tablet-width) {
         display: block;  
     }
 }
