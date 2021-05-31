@@ -1,7 +1,7 @@
 @import '../../scss/colors.scss';
 
 .comment {
-    width: 730px;
+    max-width: 730px;
     display: grid;
     position: relative;
     grid-template-columns: 67px auto;
