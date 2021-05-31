@@ -16,7 +16,12 @@
     &__apartments-card {
         grid-column-start: 2;
         grid-column-end: 3;
-        padding-left: 68px;
+        padding-left: 9.6%;
+
+        @media (max-width: $tablet-width) {
+            padding-left: 0;
+            margin: 0 auto;
+        }
     }
 
     &__text {
@@ -29,6 +34,10 @@
         margin-top: 319px;
         padding-right: 61px;
         margin-bottom: 20px;
+
+        @media (max-width: $tablet-width) {
+            width: 33%;
+        }
     }
 }
 
