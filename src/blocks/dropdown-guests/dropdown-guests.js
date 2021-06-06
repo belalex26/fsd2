@@ -1,14 +1,43 @@
-const buttons = document.querySelectorAll('.dropdown__guests-btn');
-const buttonClear = document.querySelectorAll('.dropdown__guests-btn-clear');
-const buttonApply = document.querySelectorAll('.dropdown__guests-btn-apply');
-const dataGuest = document.querySelectorAll('.dropdown__guests-counter');
+const buttons = document.querySelectorAll('.dropdown-guests__btn');
+const buttonClear = document.querySelectorAll('.dropdown-guests__btn-clear');
+const buttonApply = document.querySelectorAll('.dropdown-guests__btn-apply');
+const dataGuest = document.querySelectorAll('.dropdown-guests__counter');
 let countGuests = [];
+let sumCountGuests = 0;
 
+for (let i = 0; i < dataGuest.length; i++ ) {
+    countGuests.push( dataGuest[i].value);
+
+    dataGuest[i].addEventListener('input', function() {
+        countGuests[i] = this.value;
+        updateResults(); 
+    });
+}
+
+updateResults();
+
+function updateResults() {
+    sumCountGuests = sumArr(countGuests);
+    return sumCountGuests;
+}
+
+function sumArr(arr) {
+    let x = 0;
+    for( let i = 0; i < arr.length; i++ ){
+      x += +arr[i];
+    }
+    return x;
+}
+
+if(sumCountGuests===0) {
+    buttonClear.addClassName("dropdown-guests__btn-clear--disable")
+}
+  
 
 buttons.forEach(btn => {
     btn.addEventListener('click', function() {
         const direction = this.dataset.direction;
-        const input = this.parentElement.querySelector('.dropdown__guests-counter');
+        const input = this.parentElement.querySelector('.dropdown-guests__counter');
         const currentValue = +input.value;
         let newValue;
 
@@ -21,15 +50,16 @@ buttons.forEach(btn => {
         }
 
         input.value = newValue;
+        updateResults();
     })
 });
 
 buttonClear.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.dropdown__guests-counter')
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.dropdown-guests__counter')
             .forEach(function (item) {
                 item.value = "0";
         });
+        updateResults();
     });
 });

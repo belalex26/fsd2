@@ -1,11 +1,6 @@
 @import '../../scss/colors.scss';
 
 .range-dates {
-    display: grid;
-    grid-template-columns: 47% 47%;
-    gap: 6%;
-    width: 100%;
-    justify-content: center;
   
   &__title {
     font-family: "montserrat", "OpenSans", sans-serif;
@@ -15,10 +10,6 @@
     line-height: 15px;
     text-transform: uppercase;
     text-align: left;
-  }
-
-  &__start-date {
-    margin-right: 20px;
   }
 
   &__input {

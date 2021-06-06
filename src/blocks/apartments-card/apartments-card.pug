@@ -8,10 +8,15 @@ mixin apartments-card()
     form.apartments-card__form(action="/mock-address", method="get")
       .apartments-card__body
         .apartments-card__range-data
-          +range-dates({
-            titleIn: "Прибытие",
-            titleOut: "Выезд"
-          })
+          .apartments-card__data-in
+            +range-dates({
+              title: "Прибытие"
+            })
+
+          .apartments-card__data-out
+            +range-dates({
+              title: "Выезд"
+            })
 
         .apartments-card__guests
             h3.apartments-card__guests-title Гости

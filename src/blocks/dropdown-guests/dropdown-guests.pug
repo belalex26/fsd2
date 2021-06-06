@@ -9,12 +9,12 @@ mixin dropdown-guests({placeholder, value, option})
                     li.dropdown-guests__item
                         p.dropdown-guests__text=item.name
                         .dropdown-guests__control
-                            button.dropdown-guests__btn.dropdown-guests__btn--minus(data-direction='minus' aria-label='минус') &#8722;
+                            button.dropdown-guests__btn.dropdown-guests__btn--minus(type="button" data-direction='minus' aria-label='минус') &#8722;
                             input.dropdown-guests__counter(type=number value=item.value)
-                            button.dropdown-guests__btn.dropdown-guests__btn--plus(data-direction='plus' aria-label='плюс') &#43;
+                            button.dropdown-guests__btn.dropdown-guests__btn--plus(type="button" data-direction='plus' aria-label='плюс') &#43;
             .dropdown-guests__bar                
-                button.dropdown-guests__btn-clear очистить
-                button.dropdown-guests__btn-apply применить
+                button.dropdown-guests__btn-clear(type="button") очистить
+                button.dropdown-guests__btn-apply(type="button") применить
 
 
         

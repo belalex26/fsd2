@@ -19,7 +19,7 @@ head
   include ../../blocks/radio-button/radio-button
   include ../../blocks/toggle-button/toggle-button
   include ../../blocks/like-button/like-button
-  include ../../blocks/rating/rating
+  include ../../blocks/simple-rating/simple-rating
   include ../../blocks/comment/comment
   include ../../blocks/pagination/pagination
   include ../../blocks/filter-date/filter-date
@@ -79,8 +79,7 @@ head
 
           .form-elements__item.form-elements__range-dates
             +range-dates({
-              titleIn: "date dropdown",
-              titleOut: "date dropdown"
+              title: "date dropdown"
             })
 
           .form-elements__item.form-elements__filter-date
@@ -217,8 +216,8 @@ head
             .form-elements__head
               .form-elements__title Rate button
             .form-elements__rate-button-content
-              +rating(4, true)
-              +rating(5, true)
+              +simple-rating (4)
+              +simple-rating (5)
 
         .form-elements__container-mid-bot
           
@@ -246,10 +245,10 @@ head
               range: "5 000₽ - 10 000₽"  
             })
 
-          .form-elements__item
+          .form-elements__item.form-elements__buttons
             .form-elements__head
               .form-elements__title Buttons
-            .form-elements__buttons
+            .form-elements__button
               +button('fill', 'click me', '#')
               +button('fill-hover', 'click me', '#')
             

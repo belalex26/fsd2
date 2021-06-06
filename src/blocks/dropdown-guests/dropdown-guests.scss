@@ -141,6 +141,10 @@
         padding: 13px 14px;
     }
 
+    &__btn-clear--disable {
+        opacity: 0;
+    }
+
     &__btn-apply {
         padding: 10px 10px;
     }

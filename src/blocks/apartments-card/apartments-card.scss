@@ -13,6 +13,13 @@
 
     &__range-data {
         width: 101%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__data-in,
+    &__data-out {
+        width: 150px;
     }
 
     &__guests {

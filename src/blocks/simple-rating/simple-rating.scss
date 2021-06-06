@@ -1,0 +1,19 @@
+@import "../../scss/colors.scss";
+
+.simple-rating {
+    display: flex;
+    user-select: none;
+  
+    &__icon {
+    font-family: 'material-icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 1.5rem;
+      display: inline-block;
+      line-height: 1rem;
+      text-transform: none;
+      background: $gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }

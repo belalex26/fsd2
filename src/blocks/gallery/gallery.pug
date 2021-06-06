@@ -1,12 +1,12 @@
-mixin gallery(image, arrows = true)
+mixin gallery(image)
   .gallery
     .gallery__image
       img(src=require(`blocks/gallery/images/${image}`), alt="apartment photo")
-      if (arrows)
-        .gallery__left-arrow.gallery__arrow
-        .gallery__right-arrow.gallery__arrow
+      .gallery__arrow
+        .gallery__left-arrow
+        .gallery__right-arrow
       .gallery__point-container
-        .gallery__point.gallery__point_filled
-        .gallery__point
-        .gallery__point
-        .gallery__point
+        button.gallery__point.gallery__point-active
+        button.gallery__point
+        button.gallery__point
+        button.gallery__point

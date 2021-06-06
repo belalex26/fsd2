@@ -193,8 +193,9 @@
     }
 
     &__range-dates {
-        margin-top: 21px;
+        margin-top: 0;
         margin-bottom: 25px;
+        margin-right: 172px;
     
     }
 
@@ -243,15 +244,21 @@
         display: grid;
         grid-template-columns: auto auto;
         grid-column-gap: 10px;
-        padding-top: 7px;
+        padding-top: 16px;
     }
 
     &__buttons {
+        margin-top: 26px;
+    }
+
+    &__button {
         width: 200px;
         display: grid;
         grid-column-gap: 18px;
         grid-row-gap: 30px;
         grid-template-columns: 50% 50%;
+        align-items: center;
+        margin-top: 17px;
     }
 
     &__buttons-no-border {
@@ -264,6 +271,8 @@
 
     &__buttons-long {
         width: 120%;
+        margin-top: 14px;
+        margin-bottom: 22px;
 
         @media (max-width: $tablet-width) {
             width: 100%;

@@ -1,0 +1,9 @@
+mixin simple-rating(rate)
+  - var count = 0;
+  .simple-rating
+    while count < 5
+      if count < rate
+        i.simple-rating__icon star
+      else
+        i.simple-rating__icon star_border
+      -count++

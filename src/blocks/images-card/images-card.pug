@@ -1,17 +1,17 @@
 include ../gallery/gallery
 include ../apartment-info/apartment-info 
 include ../price/price 
-include ../rating/rating
+include ../../blocks/simple-rating/simple-rating
 
-mixin images-card({image, arrows, position, lux, price, rating, comments})
+mixin images-card({image, position, lux, price, rate, comments})
   .images-card
-    +gallery(image, arrows)
+    +gallery(image)
     .images-card__body
       .images-card__apartment-info
         +apartment-info({number: position, lux: lux})
         +price(price)
       .images-card__rating
-        +rating(rating)
+        +simple-rating(rate)
         .images-card__comments
           p.images-card__text.images-card__text-accented= comments
           p.images-card__text &nbsp;Отзывов
